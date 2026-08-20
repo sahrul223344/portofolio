@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional | Sahrul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Animate On Scroll (AOS) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .blob-animation {
+            animation: morph 8s infinite ease-in-out;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+        @keyframes morph {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+        section[id] { scroll-margin-top: 84px; }
+    </style>
+</head>
+
+<body class="bg-slate-900 font-sans text-slate-100 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-16 py-5 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 transition-all duration-300">
+        <a class="text-xl font-bold tracking-tight text-slate-100" href="#home">
+            Sahrul <span class="text-indigo-500">Web Dev</span>
+        </a>
+        <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Beranda</a>
+            <a href="#about" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Tentang</a>
+            <a href="#skills" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Keahlian</a>
+            <a href="#project" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Proyek</a>
+            <a href="#kontak" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Kontak</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <a href="#kontak" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">
+                Hubungi Saya
+            </a>
+            <i class='bx bx-menu text-2xl text-slate-100 cursor-pointer md:hidden' id="menu-btn"></i>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-slate-900/95 border-b border-slate-800 flex-col py-6 px-6 space-y-4 hidden md:hidden transition-all duration-300">
+            <a href="#home" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Beranda</a>
+            <a href="#about" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Tentang</a>
+            <a href="#skills" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Keahlian</a>
+            <a href="#project" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Proyek</a>
+            <a href="#kontak" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="min-h-screen pt-28 pb-16 px-6 md:px-16 flex flex-col-reverse md:flex-row justify-between items-center gap-12 max-w-7xl mx-auto" id="home">
+        <div class="w-full md:w-3/5 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="text-lg md:text-xl text-slate-400 font-medium mb-2">Selamat Datang, Saya</h2>
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-slate-100">
+                Sahrul <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Web Dev</span>
+            </h1>
+            <p class="text-lg md:text-xl font-medium text-slate-300 mb-4 h-8">
+                <span id="typing-text" class="text-indigo-400"></span>
+            </p>
+            <p class="text-base text-slate-400 leading-relaxed max-w-xl mx-auto md:mx-0 mb-8">
+                Platform profesional untuk menyajikan portofolio karya, ide, dan kontribusi dalam bidang rekayasa perangkat lunak dan pengembangan web.
+            </p>
+            <div class="flex justify-center md:justify-start space-x-5 mb-8">
+                <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-github'></i></a>
+                <a href="www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                <a class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5" href="#about">Tentang Saya</a>
+                <a class="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-200 hover:bg-slate-800 font-medium rounded-lg transition-all duration-300" href="#skills">Keahlian</a>
+            </div>
+        </div>
+        <div class="w-full md:w-2/5 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+            <img src="./css/img/sahrul.png" alt="Foto Sahrul" class="blob-animation w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-slate-800 shadow-2xl shadow-indigo-500/10">
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="py-24 bg-slate-950/40 px-6 md:px-16 border-t border-b border-slate-800" id="about">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="w-full md:w-1/3 flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+                <img src="./css/img/sahrul.png" alt="Gambar Sahrul" class="w-64 h-80 object-cover rounded-2xl shadow-2xl border border-slate-800">
+            </div>
+            <div class="w-full md:w-2/3 text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
+                <h3 class="text-3xl font-bold mb-6 flex items-center justify-center md:justify-start gap-3"><i class='bx bx-user-circle text-indigo-500'></i> Tentang Saya</h3>
+                <p class="text-slate-400 leading-relaxed mb-8 text-base">
+                    Saya Sahrul, seorang mahasiswa Program Studi Informatika yang memiliki ketertarikan mendalam pada pengembangan perangkat lunak web (sisi antarmuka dan peladen). Bagi saya, pemrograman bukan sekadar implementasi sintaksis, melainkan instrumen kreativitas guna merumuskan solusi teknologi yang fungsional, efisien, dan memberikan nilai tambah yang signifikan.
+                </p>
+                <a href="#project" class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">Tinjau Proyek</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-24 px-6 md:px-16 max-w-7xl mx-auto" id="skills">
+        <h3 class="text-3xl font-bold text-center mb-3 flex items-center justify-center gap-3" data-aos="fade-down">
+            <i class='bx bx-code-alt text-indigo-500'></i> Keahlian Teknis
+        </h3>
+        <p class="text-center text-slate-400 text-sm max-w-xl mx-auto mb-12">Komplemen teknologi yang dikuasai untuk merancang aplikasi web secara komprehensif, mulai dari arsitektur sistem hingga antarmuka pengguna.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <i class='bx bx-data text-4xl text-indigo-500 mb-4 inline-block'></i>
+                <h5 class="text-lg font-semibold mb-3">Pengembangan Backend</h5>
+                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Laravel</li>
+                    <li>REST API</li>
+                    <li>WebSocket (Laravel Reverb)</li>
+                </ul>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
+                <i class='bx bx-layer text-4xl text-indigo-500 mb-4 inline-block'></i>
+                <h5 class="text-lg font-semibold mb-3">Pengembangan Frontend</h5>
+                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
+                    <li>HTML5 & CSS</li>
+                    <li>Blade & Alpine.js</li>
+                    <li>React & Inertia.js</li>
+                    <li>Tailwind CSS & Flowbite</li>
+                </ul>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <i class='bx bx-cylinder text-4xl text-indigo-500 mb-4 inline-block'></i>
+                <h5 class="text-lg font-semibold mb-3">Manajemen Basis Data</h5>
+                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
+                <i class='bx bx-wrench text-4xl text-indigo-500 mb-4 inline-block'></i>
+                <h5 class="text-lg font-semibold mb-3">Perkakas & DevOps</h5>
+                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
+                    <li>Git & GitHub</li>
+                    <li>Composer</li>
+                    <li>phpMyAdmin</li>
+                    <li>Postman</li>
+                </ul>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <i class='bx bx-test-tube text-4xl text-indigo-500 mb-4 inline-block'></i>
+                <h5 class="text-lg font-semibold mb-3">Otomatisasi & Pengujian</h5>
+                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
+                    <li>Node.js</li>
+                    <li>Selenium</li>
+                    <li>Playwright</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section class="py-24 bg-slate-950 px-6 md:px-16 border-t border-b border-slate-800" id="project">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-3" data-aos="fade-down">
+                <i class='bx bx-briefcase text-indigo-500'></i> Portofolio Proyek
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="overflow-hidden h-52">
+                        <img src="./css/img/1.png" alt="Kedai Kopi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Kedai Kopi Sederhana</h5>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">Laman landas komersial modern untuk kedai kopi guna memperkuat pencitraan merek secara digital.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="overflow-hidden h-52">
+                        <img src="./css/img/2.png" alt="Calculator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Kalkulator Interaktif</h5>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">Aplikasi web kalkulator berbasis JavaScript dengan fungsionalitas komputasi dasar yang responsif.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="overflow-hidden h-52">
+                        <img src="./css/img/3.png" alt="Curricula AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Curricula AI</h5>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">Sistem berbasis kecerdasan buatan untuk perancangan kurikulum bagi kreator, pelajar, serta pendidik dengan format keluaran PDF, PPT, dan dokumen.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="overflow-hidden h-52">
+                        <img src="./css/img/4.png" alt="Voxflow AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Voxflow AI</h5>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">Aplikasi kecerdasan buatan untuk menghasilkan siniar (podcast) otomatis dengan keluaran berupa berkas audio serta video pendek.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 px-6 md:px-16" id="kontak">
+        <div class="max-w-xl mx-auto bg-slate-800/40 border border-slate-800 p-8 md:p-10 rounded-2xl shadow-xl" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-center mb-2">Hubungi Kami</h2>
+            <p class="text-center text-slate-400 text-sm mb-8">Memiliki penawaran proyek atau rencana kolaborasi? Silakan sampaikan pesan Anda melalui formulir di bawah ini.</p>
+            <form onsubmit="pesan(event)" class="space-y-5">
+                <div>
+                    <label for="name" class="block mb-2 text-sm text-slate-200 font-medium">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm">
+                </div>
+                <div>
+                    <label for="email" class="block mb-2 text-sm text-slate-200 font-medium">Alamat Surel (Email)</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan alamat surel aktif" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm">
+                </div>
+                <div>
+                    <label for="message" class="block mb-2 text-sm text-slate-200 font-medium">Pesan</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tuliskan pesan atau maksud tujuan Anda..." required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5 text-sm">
+                    Kirim Pesan
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-6 md:px-16 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="#home" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Beranda</a>
+            <a href="#about" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Tentang</a>
+            <a href="#project" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Proyek</a>
+            <a href="#kontak" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Kontak</a>
+        </div>
+        <div class="flex justify-center space-x-4 mb-6">
+            <a href="https://wa.me/62xxxxxxxxxxx" target="_blank" rel="noopener noreferrer" class="text-xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" class="text-xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-github'></i></a>
+            <a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer" class="text-xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+        <div class="text-xs text-slate-500">
+            <p>&copy; 2026 <span class="text-slate-300 font-medium">Sahrul.dev</span>. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+         AOS.init({
+            once: true,
+            duration: 800
+        });
+
+        var typed = new Typed('#typing-text', {
+            strings: ['Pengembang Web Frontend', 'Pengembang Web Backend', 'Pegiat Fullstack'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true
+        });
+    </script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
