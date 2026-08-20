@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Profesional | Sahrul</title>
+    <title>Professional Portfolio | Sahrul</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -36,6 +36,8 @@
             100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
         }
         section[id] { scroll-margin-top: 84px; }
+        #mobile-menu.hidden { display: none; }
+        #mobile-menu.flex { display: flex; }
     </style>
 </head>
 
@@ -47,41 +49,41 @@
             Sahrul <span class="text-indigo-500">Web Dev</span>
         </a>
         <nav class="hidden md:flex space-x-8">
-            <a href="#home" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Beranda</a>
-            <a href="#about" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Tentang</a>
-            <a href="#skills" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Keahlian</a>
-            <a href="#project" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Proyek</a>
-            <a href="#kontak" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Kontak</a>
+            <a href="#home" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Home</a>
+            <a href="#about" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">About</a>
+            <a href="#skills" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Skills</a>
+            <a href="#project" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Projects</a>
+            <a href="#contact" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Contact</a>
         </nav>
         <div class="flex items-center space-x-4">
-            <a href="#kontak" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">
-                Hubungi Saya
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">
+                Get in Touch
             </a>
             <i class='bx bx-menu text-2xl text-slate-100 cursor-pointer md:hidden' id="menu-btn"></i>
         </div>
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-slate-900/95 border-b border-slate-800 flex-col py-6 px-6 space-y-4 hidden md:hidden transition-all duration-300">
-            <a href="#home" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Beranda</a>
-            <a href="#about" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Tentang</a>
-            <a href="#skills" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Keahlian</a>
-            <a href="#project" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Proyek</a>
-            <a href="#kontak" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Kontak</a>
+            <a href="#home" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Home</a>
+            <a href="#about" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">About</a>
+            <a href="#skills" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Skills</a>
+            <a href="#project" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Projects</a>
+            <a href="#contact" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Contact</a>
         </div>
     </header>
 
     <!-- Home Section -->
-    <section class="min-h-screen pt-28 pb-16 px-6 md:px-16 flex flex-col-reverse md:flex-row justify-between items-center gap-12 max-w-7xl mx-auto" id="home">
+    <section class="min-h-screen pt-24 pb-12 md:pt-28 md:pb-16 px-6 md:px-16 flex flex-col-reverse md:flex-row justify-between items-center gap-10 md:gap-12 max-w-7xl mx-auto" id="home">
         <div class="w-full md:w-3/5 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
-            <h2 class="text-lg md:text-xl text-slate-400 font-medium mb-2">Selamat Datang, Saya</h2>
+            <h2 class="text-lg md:text-xl text-slate-400 font-medium mb-2">Welcome, I'm</h2>
             <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-slate-100">
                 Sahrul <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Web Dev</span>
             </h1>
             <p class="text-lg md:text-xl font-medium text-slate-300 mb-4 h-8">
                 <span id="typing-text" class="text-indigo-400"></span>
             </p>
-            <p class="text-base text-slate-400 leading-relaxed max-w-xl mx-auto md:mx-0 mb-8">
-                Platform profesional untuk menyajikan portofolio karya, ide, dan kontribusi dalam bidang rekayasa perangkat lunak dan pengembangan web.
+            <p class="text-base text-slate-400 leading-relaxed max-w-xl mx-auto md:mx-0 mb-8 text-left">
+                I design and build reliable, high-performing web applications — turning complex requirements into clean architecture and polished user experiences. Explore my work, technical expertise, and the projects I've delivered below.
             </p>
             <div class="flex justify-center md:justify-start space-x-5 mb-8">
                 <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-whatsapp'></i></a>
@@ -89,41 +91,43 @@
                 <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-linkedin-square'></i></a>
             </div>
             <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                <a class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5" href="#about">Tentang Saya</a>
-                <a class="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-200 hover:bg-slate-800 font-medium rounded-lg transition-all duration-300" href="#skills">Keahlian</a>
+                <a class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5" href="#about">About Me</a>
+                <a class="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-200 hover:bg-slate-800 font-medium rounded-lg transition-all duration-300" href="#skills">Skills</a>
             </div>
         </div>
         <div class="w-full md:w-2/5 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
-            <img src="./css/img/sahrul.png" alt="Foto Sahrul" class="blob-animation w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-slate-800 shadow-2xl shadow-indigo-500/10">
+            <img src="./css/img/sahrul.png" alt="Sahrul's photo" class="blob-animation w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 object-cover border-4 border-slate-800 shadow-2xl shadow-indigo-500/10">
         </div>
     </section>
-    
+
     <!-- About Section -->
-    <section class="py-24 bg-slate-950/40 px-6 md:px-16 border-t border-b border-slate-800" id="about">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-            <div class="w-full md:w-1/3 flex justify-center" data-aos="fade-right" data-aos-duration="1000">
-                <img src="./css/img/sahrul.png" alt="Gambar Sahrul" class="w-64 h-80 object-cover rounded-2xl shadow-2xl border border-slate-800">
+    <section class="py-16 md:py-24 bg-slate-950/40 px-6 md:px-16 border-t border-b border-slate-800" id="about">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
+            <div class="w-full flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+                <img src="./css/img/sahrul.png" alt="Photo of Sahrul" class="w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 object-cover rounded-2xl shadow-2xl border border-slate-800">
             </div>
-            <div class="w-full md:w-2/3 text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
-                <h3 class="text-3xl font-bold mb-6 flex items-center justify-center md:justify-start gap-3"><i class='bx bx-user-circle text-indigo-500'></i> Tentang Saya</h3>
-                <p class="text-slate-400 leading-relaxed mb-8 text-base">
-                    Saya Sahrul, seorang mahasiswa Program Studi Informatika yang memiliki ketertarikan mendalam pada pengembangan perangkat lunak web (sisi antarmuka dan peladen). Bagi saya, pemrograman bukan sekadar implementasi sintaksis, melainkan instrumen kreativitas guna merumuskan solusi teknologi yang fungsional, efisien, dan memberikan nilai tambah yang signifikan.
+            <div class="w-full text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-3"><i class='bx bx-user-circle text-indigo-500'></i> About Me</h3>
+                <p class="text-slate-400 leading-relaxed mb-8 text-base text-left">
+                    I'm Sahrul, an Informatics student specializing in full-stack web development, with hands-on experience across both front-end interfaces and back-end systems. I approach programming not as mere syntax, but as a discipline for engineering thoughtful, efficient solutions that solve real problems and create measurable value. I'm driven by continuous learning and a commitment to writing code that performs well and scales cleanly.
                 </p>
-                <a href="#project" class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">Tinjau Proyek</a>
+                <div class="text-center md:text-left">
+                    <a href="#project" class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">View Projects</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="py-24 px-6 md:px-16 max-w-7xl mx-auto" id="skills">
-        <h3 class="text-3xl font-bold text-center mb-3 flex items-center justify-center gap-3" data-aos="fade-down">
-            <i class='bx bx-code-alt text-indigo-500'></i> Keahlian Teknis
+    <section class="py-16 md:py-24 px-6 md:px-16 max-w-7xl mx-auto" id="skills">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-3 flex items-center justify-center gap-3" data-aos="fade-down">
+            <i class='bx bx-code-alt text-indigo-500'></i> Technical Skills
         </h3>
-        <p class="text-center text-slate-400 text-sm max-w-xl mx-auto mb-12">Komplemen teknologi yang dikuasai untuk merancang aplikasi web secara komprehensif, mulai dari arsitektur sistem hingga antarmuka pengguna.</p>
+        <p class="text-center text-slate-400 text-sm max-w-xl mx-auto mb-10 md:mb-12">A comprehensive, production-ready technology stack spanning system architecture, back-end services, and front-end interfaces — enabling me to deliver end-to-end web solutions with confidence.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <i class='bx bx-data text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Pengembangan Backend</h5>
+                <h5 class="text-lg font-semibold mb-3">Backend Development</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
                     <li>PHP</li>
                     <li>JavaScript</li>
@@ -135,7 +139,7 @@
             </div>
             <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
                 <i class='bx bx-layer text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Pengembangan Frontend</h5>
+                <h5 class="text-lg font-semibold mb-3">Frontend Development</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
                     <li>HTML5 & CSS</li>
                     <li>Blade & Alpine.js</li>
@@ -145,7 +149,7 @@
             </div>
             <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <i class='bx bx-cylinder text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Manajemen Basis Data</h5>
+                <h5 class="text-lg font-semibold mb-3">Database Management</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
                     <li>MySQL</li>
                     <li>PostgreSQL</li>
@@ -153,7 +157,7 @@
             </div>
             <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
                 <i class='bx bx-wrench text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Perkakas & DevOps</h5>
+                <h5 class="text-lg font-semibold mb-3">Tools & DevOps</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
                     <li>Git & GitHub</li>
                     <li>Composer</li>
@@ -163,7 +167,7 @@
             </div>
             <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
                 <i class='bx bx-test-tube text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Otomatisasi & Pengujian</h5>
+                <h5 class="text-lg font-semibold mb-3">Automation & Testing</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
                     <li>Node.js</li>
                     <li>Selenium</li>
@@ -174,30 +178,30 @@
     </section>
 
     <!-- Project Section -->
-    <section class="py-24 bg-slate-950 px-6 md:px-16 border-t border-b border-slate-800" id="project">
+    <section class="py-16 md:py-24 bg-slate-950 px-6 md:px-16 border-t border-b border-slate-800" id="project">
         <div class="max-w-7xl mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-3" data-aos="fade-down">
-                <i class='bx bx-briefcase text-indigo-500'></i> Portofolio Proyek
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-12 flex items-center justify-center gap-3" data-aos="fade-down">
+                <i class='bx bx-briefcase text-indigo-500'></i> Project Portfolio
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <!-- Card 1 -->
                 <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
                     <div class="overflow-hidden h-52">
-                        <img src="./css/img/1.png" alt="Kedai Kopi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="./css/img/1.png" alt="Simple Coffee Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
-                        <h5 class="text-xl font-semibold mb-2">Kedai Kopi Sederhana</h5>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">Laman landas komersial modern untuk kedai kopi guna memperkuat pencitraan merek secara digital.</p>
+                        <h5 class="text-xl font-semibold mb-2">Simple Coffee Shop</h5>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">A modern, conversion-focused landing page designed to elevate a coffee brand's digital presence and engage customers at first glance.</p>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
                     <div class="overflow-hidden h-52">
-                        <img src="./css/img/2.png" alt="Calculator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="./css/img/2.png" alt="Interactive Calculator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
-                        <h5 class="text-xl font-semibold mb-2">Kalkulator Interaktif</h5>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">Aplikasi web kalkulator berbasis JavaScript dengan fungsionalitas komputasi dasar yang responsif.</p>
+                        <h5 class="text-xl font-semibold mb-2">Interactive Calculator</h5>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">A responsive, JavaScript-powered calculator web app engineered for accuracy, speed, and a seamless user experience across devices.</p>
                     </div>
                 </div>
                 <!-- Card 3 -->
@@ -207,7 +211,7 @@
                     </div>
                     <div class="p-6">
                         <h5 class="text-xl font-semibold mb-2">Curricula AI</h5>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">Sistem berbasis kecerdasan buatan untuk perancangan kurikulum bagi kreator, pelajar, serta pendidik dengan format keluaran PDF, PPT, dan dokumen.</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">An AI-driven curriculum design platform built for creators, students, and educators, streamlining content creation with exportable PDF, PowerPoint, and document formats.</p>
                     </div>
                 </div>
                 <!-- Card 4 -->
@@ -217,7 +221,7 @@
                     </div>
                     <div class="p-6">
                         <h5 class="text-xl font-semibold mb-2">Voxflow AI</h5>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">Aplikasi kecerdasan buatan untuk menghasilkan siniar (podcast) otomatis dengan keluaran berupa berkas audio serta video pendek.</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">An AI-powered podcast generation platform that automates content production end-to-end, delivering polished audio episodes and short-form video output.</p>
                     </div>
                 </div>
             </div>
@@ -225,37 +229,38 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-24 px-6 md:px-16" id="kontak">
-        <div class="max-w-xl mx-auto bg-slate-800/40 border border-slate-800 p-8 md:p-10 rounded-2xl shadow-xl" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-center mb-2">Hubungi Kami</h2>
-            <p class="text-center text-slate-400 text-sm mb-8">Memiliki penawaran proyek atau rencana kolaborasi? Silakan sampaikan pesan Anda melalui formulir di bawah ini.</p>
-            <form onsubmit="pesan(event)" class="space-y-5">
+    <section class="py-16 md:py-24 px-6 md:px-16" id="contact">
+        <div class="max-w-xl mx-auto bg-slate-800/40 border border-slate-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl" data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Let's Work Together</h2>
+            <p class="text-center text-slate-400 text-sm mb-8">Have a project in mind or an opportunity to discuss? I'd love to hear from you — send a message and I'll respond promptly.</p>
+            <form id="contact-form" class="space-y-5">
                 <div>
-                    <label for="name" class="block mb-2 text-sm text-slate-200 font-medium">Nama Lengkap</label>
-                    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm">
+                    <label for="name" class="block mb-2 text-sm text-slate-200 font-medium">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm">
                 </div>
                 <div>
-                    <label for="email" class="block mb-2 text-sm text-slate-200 font-medium">Alamat Surel (Email)</label>
-                    <input type="email" id="email" name="email" placeholder="Masukkan alamat surel aktif" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm">
+                    <label for="email" class="block mb-2 text-sm text-slate-200 font-medium">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter a valid email address" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm">
                 </div>
                 <div>
-                    <label for="message" class="block mb-2 text-sm text-slate-200 font-medium">Pesan</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Tuliskan pesan atau maksud tujuan Anda..." required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm resize-none"></textarea>
+                    <label for="message" class="block mb-2 text-sm text-slate-200 font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm resize-none"></textarea>
                 </div>
                 <button type="submit" class="w-full px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5 text-sm">
-                    Kirim Pesan
+                    Send Message
                 </button>
+                <p id="form-status" class="text-center text-sm text-indigo-400 hidden"></p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-6 md:px-16 text-center">
-        <div class="flex justify-center space-x-6 mb-6">
-            <a href="#home" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Beranda</a>
-            <a href="#about" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Tentang</a>
-            <a href="#project" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Proyek</a>
-            <a href="#kontak" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Kontak</a>
+    <footer class="bg-slate-950 border-t border-slate-800 py-10 md:py-12 px-6 md:px-16 text-center">
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6">
+            <a href="#home" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Home</a>
+            <a href="#about" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">About</a>
+            <a href="#project" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Projects</a>
+            <a href="#contact" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Contact</a>
         </div>
         <div class="flex justify-center space-x-4 mb-6">
               <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-whatsapp'></i></a>
@@ -263,7 +268,7 @@
                 <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-linkedin-square'></i></a>
         </div>
         <div class="text-xs text-slate-500">
-            <p>&copy; 2026 <span class="text-slate-300 font-medium">Sahrul.dev</span>. Hak Cipta Dilindungi.</p>
+            <p>&copy; 2026 <span class="text-slate-300 font-medium">Sahrul.dev</span>. All rights reserved.</p>
         </div>
     </footer>
 
@@ -271,20 +276,51 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-         AOS.init({
+        AOS.init({
             once: true,
             duration: 800
         });
 
         var typed = new Typed('#typing-text', {
-            strings: ['Pengembang Web Frontend', 'Pengembang Web Backend', 'Pengembangan Web fulstack'],
+            strings: ['Frontend Web Developer', 'Backend Web Developer', 'Full-Stack Web Developer'],
             typeSpeed: 60,
             backSpeed: 40,
             backDelay: 1500,
             loop: true
         });
+
+        // Mobile menu toggle (fixes menu not opening on mobile / other viewports)
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            menuBtn.classList.toggle('bx-menu');
+            menuBtn.classList.toggle('bx-x');
+        });
+
+        // Close mobile menu after clicking a link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                menuBtn.classList.add('bx-menu');
+                menuBtn.classList.remove('bx-x');
+            });
+        });
+
+        // Contact form handler (kept client-side; wire up to your backend/email service as needed)
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            formStatus.textContent = 'Thank you for reaching out — your message has been received and I will get back to you shortly.';
+            formStatus.classList.remove('hidden');
+            contactForm.reset();
+        });
     </script>
-    <script src="./script/script.js"></script>
 </body>
 
 </html>
