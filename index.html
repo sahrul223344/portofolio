@@ -4,10 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio | Sahrul</title>
+
+    <!-- SEO & Open Graph Meta Tags -->
+    <title>Sahrul | Full-Stack Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Sahrul - Junior Full-Stack Developer specializing in Python, FastAPI, React, and AI integrations.">
+    <meta property="og:title" content="Sahrul | Full-Stack Developer Portfolio">
+    <meta property="og:description" content="Explore my projects, tech stack, and background in AI web applications.">
+    <meta property="og:image" content="./css/img/sahrul.png">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -21,98 +32,170 @@
             }
         }
     </script>
+
     <!-- Animate On Scroll (AOS) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <style>
         .blob-animation {
             animation: morph 8s infinite ease-in-out;
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
         }
+
         @keyframes morph {
-            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-            50% { border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%; }
-            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            0% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+
+            50% {
+                border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%;
+            }
+
+            100% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
         }
-        section[id] { scroll-margin-top: 84px; }
-        #mobile-menu.hidden { display: none; }
-        #mobile-menu.flex { display: flex; }
+
+        section[id] {
+            scroll-margin-top: 84px;
+        }
+
+        #mobile-menu.hidden {
+            display: none;
+        }
+
+        #mobile-menu.flex {
+            display: flex;
+        }
     </style>
 </head>
 
 <body class="bg-slate-900 font-sans text-slate-100 overflow-x-hidden">
 
     <!-- Navbar -->
-    <header class="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-16 py-5 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 transition-all duration-300">
+    <header
+        class="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-16 py-5 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 transition-all duration-300">
         <a class="text-xl font-bold tracking-tight text-slate-100" href="#home">
             Sahrul <span class="text-indigo-500">Web Dev</span>
         </a>
         <nav class="hidden md:flex space-x-8">
-            <a href="#home" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Home</a>
-            <a href="#about" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">About</a>
-            <a href="#skills" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Skills</a>
-            <a href="#project" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Projects</a>
-            <a href="#contact" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors duration-300">Contact</a>
+            <a href="#home" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Home</a>
+            <a href="#about"
+                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">About</a>
+            <a href="#skills"
+                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Skills</a>
+            <a href="#education"
+                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Education</a>
+            <a href="#project"
+                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Projects</a>
+            <a href="#contact"
+                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Contact</a>
         </nav>
         <div class="flex items-center space-x-4">
-            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">
+            <a href="#contact"
+                class="hidden md:inline-flex items-center justify-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">
                 Get in Touch
             </a>
             <i class='bx bx-menu text-2xl text-slate-100 cursor-pointer md:hidden' id="menu-btn"></i>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-slate-900/95 border-b border-slate-800 flex-col py-6 px-6 space-y-4 hidden md:hidden transition-all duration-300">
+        <div id="mobile-menu"
+            class="absolute top-full left-0 w-full bg-slate-900/95 border-b border-slate-800 flex-col py-6 px-6 space-y-4 hidden md:hidden transition-all duration-300">
             <a href="#home" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Home</a>
             <a href="#about" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">About</a>
             <a href="#skills" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Skills</a>
+            <a href="#education" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Education</a>
             <a href="#project" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Projects</a>
             <a href="#contact" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Contact</a>
         </div>
     </header>
 
     <!-- Home Section -->
-    <section class="min-h-screen pt-24 pb-12 md:pt-28 md:pb-16 px-6 md:px-16 flex flex-col-reverse md:flex-row justify-between items-center gap-10 md:gap-12 max-w-7xl mx-auto" id="home">
+    <section
+        class="min-h-screen pt-24 pb-12 md:pt-28 md:pb-16 px-6 md:px-16 flex flex-col-reverse md:flex-row justify-between items-center gap-10 md:gap-12 max-w-7xl mx-auto"
+        id="home">
         <div class="w-full md:w-3/5 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="text-lg md:text-xl text-slate-400 font-medium mb-2">Welcome, I'm</h2>
             <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-slate-100">
-                Sahrul <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Web Dev</span>
+                Sahrul <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Web
+                    Dev</span>
             </h1>
             <p class="text-lg md:text-xl font-medium text-slate-300 mb-4 h-8">
                 <span id="typing-text" class="text-indigo-400"></span>
             </p>
             <p class="text-base text-slate-400 leading-relaxed max-w-xl mx-auto md:mx-0 mb-8 text-left">
-                I design and build reliable, high-performing web applications — turning complex requirements into clean architecture and polished user experiences. Explore my work, technical expertise, and the projects I've delivered below.
+                I design and build reliable, high-performing web applications — turning complex requirements into clean
+                architecture and polished user experiences.
             </p>
             <div class="flex justify-center md:justify-start space-x-5 mb-8">
-                <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-whatsapp'></i></a>
-                <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer"
+                    class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all"><i
+                        class='bx bxl-whatsapp'></i></a>
+                <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer"
+                    class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all"><i
+                        class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer"
+                    class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all"><i
+                        class='bx bxl-linkedin-square'></i></a>
             </div>
+
+            <!-- CTAs & Download CV -->
             <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                <a class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5" href="#about">About Me</a>
-                <a class="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-200 hover:bg-slate-800 font-medium rounded-lg transition-all duration-300" href="#skills">Skills</a>
+                <a href="#contact"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all hover:-translate-y-0.5">
+                    contac me
+                </a>
+                <a class="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-200 hover:bg-slate-800 font-medium rounded-lg transition-all"
+                    href="#project">
+                    View Projects
+                </a>
             </div>
         </div>
         <div class="w-full md:w-2/5 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
-            <img src="./css/img/sahrul.png" alt="Sahrul's photo" class="blob-animation w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 object-cover border-4 border-slate-800 shadow-2xl shadow-indigo-500/10">
+            <img src="./css/img/sahrul.png" alt="Sahrul's photo"
+                class="blob-animation w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 object-cover border-4 border-slate-800 shadow-2xl shadow-indigo-500/10">
         </div>
     </section>
-
     <!-- About Section -->
     <section class="py-16 md:py-24 bg-slate-950/40 px-6 md:px-16 border-t border-b border-slate-800" id="about">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
-            <div class="w-full flex justify-center" data-aos="fade-right" data-aos-duration="1000">
-                <img src="./css/img/sahrul.png" alt="Photo of Sahrul" class="w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 object-cover rounded-2xl shadow-2xl border border-slate-800">
+            <div class="w-full md:w-5/12 flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+                <img src="./css/img/sahrul.png" alt="Photo of Sahrul"
+                    class="w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-2xl shadow-2xl border border-slate-800">
             </div>
-            <div class="w-full text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-3"><i class='bx bx-user-circle text-indigo-500'></i> About Me</h3>
-                <p class="text-slate-400 leading-relaxed mb-8 text-base text-left">
-                    I'm Sahrul, an Informatics student specializing in full-stack web development, with hands-on experience across both front-end interfaces and back-end systems. I approach programming not as mere syntax, but as a discipline for engineering thoughtful, efficient solutions that solve real problems and create measurable value. I'm driven by continuous learning and a commitment to writing code that performs well and scales cleanly.
-                </p>
-                <div class="text-center md:text-left">
-                    <a href="#project" class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">View Projects</a>
+            <div class="w-full md:w-7/12 text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
+                <h3
+                    class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-3 text-white">
+                    <i class='bx bx-user-circle text-indigo-500'></i> About Me
+                </h3>
+
+                <div class="space-y-4 text-slate-400 leading-relaxed text-base text-left">
+                    <p>
+                        I'm Sahrul, an Informatics student and passionate Full-Stack Web Developer based in Indonesia.
+                        My journey in technology is driven by a deep curiosity for solving real-world challenges through
+                        clean code, scalable architecture, and intuitive user interface designs.
+                    </p>
+                    <p>
+                        Over the course of my academic and practical experience, I have developed expertise across
+                        modern web stacks — spanning from front-end user experience engineering with React and Tailwind
+                        CSS to robust back-end systems using FastAPI and PHP. I specialize in integrating generative AI
+                        models (such as LLMs and Speech Synthesis pipelines) into seamless web applications.
+                    </p>
+                    <p>
+                        I place high value on writing maintainable code, implementing proper database relations, and
+                        building efficient asynchronous APIs. Beyond technical implementation, I approach every project
+                        with an emphasis on performance optimization, responsive design, and user-centered solutions.
+                    </p>
+                </div>
+
+                <div class="mt-8 text-center md:text-left">
+                    <a href="#contact"
+                        class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all hover:-translate-y-0.5">
+                        Let's Talk & Collaborate
+                    </a>
                 </div>
             </div>
         </div>
@@ -120,136 +203,265 @@
 
     <!-- Skills Section -->
     <section class="py-16 md:py-24 px-6 md:px-16 max-w-7xl mx-auto" id="skills">
-        <h3 class="text-2xl md:text-3xl font-bold text-center mb-3 flex items-center justify-center gap-3" data-aos="fade-down">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-3 flex items-center justify-center gap-3"
+            data-aos="fade-down">
             <i class='bx bx-code-alt text-indigo-500'></i> Technical Skills
         </h3>
-        <p class="text-center text-slate-400 text-sm max-w-xl mx-auto mb-10 md:mb-12">A comprehensive, production-ready technology stack spanning system architecture, back-end services, and front-end interfaces — enabling me to deliver end-to-end web solutions with confidence.</p>
+        <p class="text-center text-slate-400 text-sm max-w-xl mx-auto mb-10 md:mb-12">A comprehensive technology stack
+            enabling me to deliver end-to-end web solutions with confidence.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                <i class='bx bx-data text-4xl text-indigo-500 mb-4 inline-block'></i>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
+                data-aos="fade-up" data-aos-delay="100">
+                <i class='bx bx-server text-4xl text-indigo-500 mb-4 inline-block'></i>
                 <h5 class="text-lg font-semibold mb-3">Backend Development</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>Laravel</li>
-                    <li>REST API</li>
-                    <li>WebSocket (Laravel Reverb)</li>
+                    <li>Python & FastAPI</li>
+                    <li>PHP & Laravel</li>
+                    <li>REST API Design</li>
                 </ul>
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
-                <i class='bx bx-layer text-4xl text-indigo-500 mb-4 inline-block'></i>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
+                data-aos="fade-up" data-aos-delay="150">
+                <i class='bx bx-desktop text-4xl text-indigo-500 mb-4 inline-block'></i>
                 <h5 class="text-lg font-semibold mb-3">Frontend Development</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>HTML5 & CSS</li>
-                    <li>Blade & Alpine.js</li>
-                    <li>React & Inertia.js</li>
-                    <li>Tailwind CSS & Flowbite</li>
+                    <li>JavaScript</li>
+                    <li>React & Next.js</li>
+                    <li>HTML5, CSS3 & Tailwind CSS</li>
                 </ul>
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                <i class='bx bx-cylinder text-4xl text-indigo-500 mb-4 inline-block'></i>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
+                data-aos="fade-up" data-aos-delay="200">
+                <i class='bx bx-data text-4xl text-indigo-500 mb-4 inline-block'></i>
                 <h5 class="text-lg font-semibold mb-3">Database Management</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>MySQL</li>
-                    <li>PostgreSQL</li>
+                    <li>MySQL & PostgreSQL</li>
+                    <li>SQLAlchemy & SQLite</li>
                 </ul>
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
-                <i class='bx bx-wrench text-4xl text-indigo-500 mb-4 inline-block'></i>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
+                data-aos="fade-up" data-aos-delay="250">
+                <i class='bx bx-play-circle text-4xl text-indigo-500 mb-4 inline-block'></i>
+                <h5 class="text-lg font-semibold mb-3">Audio & Media</h5>
+                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
+                    <li>FFmpeg Processing</li>
+                    <li>RSS Feed Integration</li>
+                </ul>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
+                data-aos="fade-up" data-aos-delay="300">
+                <i class='bx bx-cog text-4xl text-indigo-500 mb-4 inline-block'></i>
                 <h5 class="text-lg font-semibold mb-3">Tools & DevOps</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
                     <li>Git & GitHub</li>
-                    <li>Composer</li>
-                    <li>phpMyAdmin</li>
-                    <li>Postman</li>
+                    <li>Postman & Composer</li>
                 </ul>
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                <i class='bx bx-test-tube text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Automation & Testing</h5>
+            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
+                data-aos="fade-up" data-aos-delay="350">
+                <i class='bx bx-bot text-4xl text-indigo-500 mb-4 inline-block'></i>
+                <h5 class="text-lg font-semibold mb-3">AI & Integration</h5>
                 <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>Node.js</li>
-                    <li>Selenium</li>
-                    <li>Playwright</li>
+                    <li>OpenAI API & Qwen AI</li>
+                    <li>ElevenLabs (TTS) & Prompt Engineering</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Project Section -->
-    <section class="py-16 md:py-24 bg-slate-950 px-6 md:px-16 border-t border-b border-slate-800" id="project">
+    <!-- Education & Certifications Section -->
+    <section class="py-16 md:py-24 bg-slate-950/40 border-t border-b border-slate-800 px-6 md:px-16" id="education">
         <div class="max-w-7xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-12 flex items-center justify-center gap-3" data-aos="fade-down">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-12 flex items-center justify-center gap-3"
+                data-aos="fade-down">
+                <i class='bx bx-book-open text-indigo-500'></i> Education & Credentials
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Education -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl" data-aos="fade-right">
+                    <span class="text-xs font-semibold text-indigo-400 tracking-wider uppercase">Degree Program</span>
+                    <h4 class="text-xl font-bold mt-1 text-white">Bachelor of Computer Science in Informatics</h4>
+                    <p class="text-slate-300 text-sm">Universitas Hamzanwadi</p>
+                    <p class="text-slate-500 text-xs mt-1">Expected Graduation: 2027</p>
+                </div>
+                <!-- Certification -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl" data-aos="fade-left">
+                    <span class="text-xs font-semibold text-indigo-400 tracking-wider uppercase">Bootcamp
+                        Certification</span>
+                    <h4 class="text-xl font-bold mt-1 text-white">Digital Career Bootcamp - AI & Backend</h4>
+                    <p class="text-slate-300 text-sm">MAXY Academy (2026)</p>
+                    <p class="text-slate-400 text-xs mt-2">Focused on Advanced RESTful API design, real-time
+                        communication, and integrating LLM/AI services into backend architectures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section class="py-16 md:py-24 bg-slate-950 px-6 md:px-16 border-b border-slate-800" id="project">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-12 flex items-center justify-center gap-3"
+                data-aos="fade-down">
                 <i class='bx bx-briefcase text-indigo-500'></i> Project Portfolio
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                <!-- Card 1 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="overflow-hidden h-52">
-                        <img src="./css/img/1.png" alt="Simple Coffee Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+                <!-- Card 1: Curricula AI -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-indigo-500/40 transition-all duration-300"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <div>
+                        <div class="overflow-hidden h-52">
+                            <img src="./css/img/3.png" alt="Curricula AI"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h5 class="text-xl font-semibold mb-2 text-white">Curricula AI</h5>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Platform pembuat kurikulum dan materi pembelajaran berbasis AI dengan fitur *real-time
+                                progress streaming*, arsitektur *pub-sub asyncio*, serta *previewer/exporter* PDF
+                                interaktif.
+                            </p>
+
+                            <!-- Tech Stack Badges Lengkap -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">FastAPI</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">OpenAI
+                                    API</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">React
+                                    19</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Vite</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">SQLAlchemy</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Alembic</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">SQLite
+                                    / MySQL</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Asyncio
+                                    & SSE</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Playwright</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">ReportLab</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">pdfjs-dist</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h5 class="text-xl font-semibold mb-2">Simple Coffee Shop</h5>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">A modern, conversion-focused landing page designed to elevate a coffee brand's digital presence and engage customers at first glance.</p>
+                    <!-- Action Buttons -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="https://ai.maxy.academy/curricula-ai/" target="_blank" rel="noopener noreferrer"
+                            class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg text-sm transition-all shadow-md">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                        <a href="https://github.com/sahrul223344/circula_ai" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-lg text-sm transition-all border border-slate-700">
+                            <i class='bx bxl-github text-lg'></i>
+                        </a>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="overflow-hidden h-52">
-                        <img src="./css/img/2.png" alt="Interactive Calculator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+                <!-- Card 2: Voxflow AI -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-indigo-500/40 transition-all duration-300"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <div>
+                        <div class="overflow-hidden h-52">
+                            <img src="./css/img/4.png" alt="Voxflow AI"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h5 class="text-xl font-semibold mb-2 text-white">Voxflow AI (Podflow AI)</h5>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Platform otomasi pembuatan podcast berbasis AI yang memproses input teks/RSS menjadi
+                                rekaman suara terintegrasi melalui *pipeline* pemrosesan audio *end-to-end*[cite: 1].
+                            </p>
+
+                            <!-- Tech Stack Badges Lengkap -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">FastAPI</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Qwen
+                                    AI</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Agnes
+                                    AI</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">ElevenLabs
+                                    (TTS)</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">FFmpeg</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">REST
+                                    API</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">RSS
+                                    Feed Integration</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Relational
+                                    Database</span>
+                                <span
+                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Git
+                                    & GitHub</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h5 class="text-xl font-semibold mb-2">Interactive Calculator</h5>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">A responsive, JavaScript-powered calculator web app engineered for accuracy, speed, and a seamless user experience across devices.</p>
+                    <!-- Action Buttons -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="https://voxflow-frontend.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg text-sm transition-all shadow-md">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                        <a href="https://github.com/sahrul223344/Fodcash_Ai_Beckend" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-lg text-sm transition-all border border-slate-700">
+                            <i class='bx bxl-github text-lg'></i>
+                        </a>
                     </div>
                 </div>
-                <!-- Card 3 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="overflow-hidden h-52">
-                        <img src="./css/img/3.png" alt="Curricula AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h5 class="text-xl font-semibold mb-2">Curricula AI</h5>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">An AI-driven curriculum design platform built for creators, students, and educators, streamlining content creation with exportable PDF, PowerPoint, and document formats.</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden group hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="overflow-hidden h-52">
-                        <img src="./css/img/4.png" alt="Voxflow AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h5 class="text-xl font-semibold mb-2">Voxflow AI</h5>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6 h-10">An AI-powered podcast generation platform that automates content production end-to-end, delivering polished audio episodes and short-form video output.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="py-16 md:py-24 px-6 md:px-16" id="contact">
-        <div class="max-w-xl mx-auto bg-slate-800/40 border border-slate-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl" data-aos="fade-up">
+        <div class="max-w-xl mx-auto bg-slate-800/40 border border-slate-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl"
+            data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Let's Work Together</h2>
-            <p class="text-center text-slate-400 text-sm mb-8">Have a project in mind or an opportunity to discuss? I'd love to hear from you — send a message and I'll respond promptly.</p>
-            <form id="contact-form" class="space-y-5">
+            <p class="text-center text-slate-400 text-sm mb-8">Have a project in mind or an opportunity to discuss? Send
+                a message and I'll respond promptly.</p>
+
+            <!-- Working Formspree Form (Ganti YOUR_FORM_ID) -->
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
                 <div>
                     <label for="name" class="block mb-2 text-sm text-slate-200 font-medium">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm">
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                        class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none text-sm">
                 </div>
                 <div>
                     <label for="email" class="block mb-2 text-sm text-slate-200 font-medium">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter a valid email address" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm">
+                    <input type="email" id="email" name="email" placeholder="Enter a valid email address" required
+                        class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none text-sm">
                 </div>
                 <div>
                     <label for="message" class="block mb-2 text-sm text-slate-200 font-medium">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none transition-all duration-300 text-sm resize-none"></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required
+                        class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none text-sm resize-none"></textarea>
                 </div>
-                <button type="submit" class="w-full px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5 text-sm">
+                <button type="submit"
+                    class="w-full px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all text-sm">
                     Send Message
                 </button>
-                <p id="form-status" class="text-center text-sm text-indigo-400 hidden"></p>
+                <p id="form-status" class="text-center text-sm text-indigo-400 hidden mt-3"></p>
             </form>
         </div>
     </section>
@@ -257,15 +469,23 @@
     <!-- Footer -->
     <footer class="bg-slate-950 border-t border-slate-800 py-10 md:py-12 px-6 md:px-16 text-center">
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6">
-            <a href="#home" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Home</a>
-            <a href="#about" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">About</a>
-            <a href="#project" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Projects</a>
-            <a href="#contact" class="text-sm text-slate-400 hover:text-indigo-400 transition-colors">Contact</a>
+            <a href="#home" class="text-sm text-slate-400 hover:text-indigo-400">Home</a>
+            <a href="#about" class="text-sm text-slate-400 hover:text-indigo-400">About</a>
+            <a href="#skills" class="text-sm text-slate-400 hover:text-indigo-400">Skills</a>
+            <a href="#education" class="text-sm text-slate-400 hover:text-indigo-400">Education</a>
+            <a href="#project" class="text-sm text-slate-400 hover:text-indigo-400">Projects</a>
+            <a href="#contact" class="text-sm text-slate-400 hover:text-indigo-400">Contact</a>
         </div>
         <div class="flex justify-center space-x-4 mb-6">
-              <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-whatsapp'></i></a>
-                <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer" class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all duration-300"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer"
+                class="text-2xl text-slate-400 hover:text-indigo-400 transition-colors"><i
+                    class='bx bxl-whatsapp'></i></a>
+            <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer"
+                class="text-2xl text-slate-400 hover:text-indigo-400 transition-colors"><i
+                    class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer"
+                class="text-2xl text-slate-400 hover:text-indigo-400 transition-colors"><i
+                    class='bx bxl-linkedin-square'></i></a>
         </div>
         <div class="text-xs text-slate-500">
             <p>&copy; 2026 <span class="text-slate-300 font-medium">Sahrul.dev</span>. All rights reserved.</p>
@@ -276,10 +496,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            duration: 800
-        });
+        AOS.init({ once: true, duration: 800 });
 
         var typed = new Typed('#typing-text', {
             strings: ['Frontend Web Developer', 'Backend Web Developer', 'Full-Stack Web Developer'],
@@ -289,7 +506,6 @@
             loop: true
         });
 
-        // Mobile menu toggle (fixes menu not opening on mobile / other viewports)
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -300,7 +516,6 @@
             menuBtn.classList.toggle('bx-x');
         });
 
-        // Close mobile menu after clicking a link
         document.querySelectorAll('.mobile-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -308,17 +523,6 @@
                 menuBtn.classList.add('bx-menu');
                 menuBtn.classList.remove('bx-x');
             });
-        });
-
-        // Contact form handler (kept client-side; wire up to your backend/email service as needed)
-        const contactForm = document.getElementById('contact-form');
-        const formStatus = document.getElementById('form-status');
-
-        contactForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            formStatus.textContent = 'Thank you for reaching out — your message has been received and I will get back to you shortly.';
-            formStatus.classList.remove('hidden');
-            contactForm.reset();
         });
     </script>
 </body>
