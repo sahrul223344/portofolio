@@ -33,20 +33,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            menuBtn.classList.toggle('bx-menu');
-            menuBtn.classList.toggle('bx-x');
+        const menuIcon = menuBtn.querySelector('i') || menuBtn;
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isHidden = mobileMenu.classList.contains('hidden');
+
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                menuIcon.className = 'bx bx-x text-3xl text-indigo-400';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                menuIcon.className = 'bx bx-menu text-3xl text-slate-200';
+            }
         });
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
                 mobileMenu.classList.remove('flex');
-                menuBtn.classList.add('bx-menu');
-                menuBtn.classList.remove('bx-x');
+                menuIcon.className = 'bx bx-menu text-3xl text-slate-200';
             });
+        });
+
+        // Tutup menu otomatis jika mengeklik di luar area menu mobile
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                menuIcon.className = 'bx bx-menu text-3xl text-slate-200';
+            }
         });
     }
 
