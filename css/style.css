@@ -23,13 +23,19 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  line-height: 1.6;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
 }
 
 h1, h2, h3, h4, h5, h6, .font-display {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
   text-wrap: balance;
+}
+
+p {
+  line-height: 1.7;
 }
 
 /* Scroll Offset for Fixed Header */
@@ -197,6 +203,7 @@ section[id] {
 .tech-tag {
   transition: all 0.2s ease;
   word-break: break-word;
+  white-space: nowrap;
 }
 .tech-tag:hover {
   transform: translateY(-2px);
