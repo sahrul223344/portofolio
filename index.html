@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO & Open Graph Meta Tags -->
-    <title>Sahrul | Full-Stack Developer Portfolio</title>
+    <title>Sahrul | Portofolio Full-Stack Web Developer</title>
     <meta name="description"
-        content="Portfolio of Sahrul - Junior Full-Stack Developer specializing in Python, FastAPI, React, and AI integrations.">
-    <meta property="og:title" content="Sahrul | Full-Stack Developer Portfolio">
-    <meta property="og:description" content="Explore my projects, tech stack, and background in AI web applications.">
+        content="Portofolio Sahrul - Developer Web Full-Stack Indonesia spesialis Python, FastAPI, React, dan Integrasi Generative AI.">
+    <meta property="og:title" content="Sahrul | Portofolio Full-Stack Web Developer">
+    <meta property="og:description" content="Jelajahi proyek web, keahlian teknis, dan integrasi AI interaktif karya Sahrul.">
     <meta property="og:image" content="./css/img/sahrul.png">
     <meta property="og:type" content="website">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,176 +25,252 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
+                    screens: {
+                        'xs': '475px',
                     },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#111827',
+                            950: '#0b0f19',
+                        }
+                    }
                 }
             }
         }
     </script>
 
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
     <!-- Animate On Scroll (AOS) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Boxicons -->
+    <!-- Boxicons Icon Set -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <style>
-        .blob-animation {
-            animation: morph 8s infinite ease-in-out;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        }
-
-        @keyframes morph {
-            0% {
-                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            }
-
-            50% {
-                border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%;
-            }
-
-            100% {
-                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            }
-        }
-
-        section[id] {
-            scroll-margin-top: 84px;
-        }
-
-        #mobile-menu.hidden {
-            display: none;
-        }
-
-        #mobile-menu.flex {
-            display: flex;
-        }
-    </style>
 </head>
 
-<body class="bg-slate-900 font-sans text-slate-100 overflow-x-hidden">
+<body class="bg-[#0b0f19] font-sans text-slate-100 overflow-x-hidden relative bg-grid-pattern antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- Navbar -->
-    <header
-        class="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-16 py-5 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 transition-all duration-300">
-        <a class="text-xl font-bold tracking-tight text-slate-100" href="#home">
-            Sahrul <span class="text-indigo-500">Web Dev</span>
-        </a>
-        <nav class="hidden md:flex space-x-8">
-            <a href="#home" class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Home</a>
-            <a href="#about"
-                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">About</a>
-            <a href="#skills"
-                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Skills</a>
-            <a href="#education"
-                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Education</a>
-            <a href="#project"
-                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Projects</a>
-            <a href="#contact"
-                class="text-sm font-medium text-slate-400 hover:text-indigo-400 transition-colors">Contact</a>
-        </nav>
-        <div class="flex items-center space-x-4">
-            <a href="#contact"
-                class="hidden md:inline-flex items-center justify-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5">
-                Get in Touch
+    <!-- Background Glowing Gradient Blobs -->
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="glow-blob glow-blob-3"></div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full glass-nav border-b border-slate-800/80 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-3.5 sm:py-4 flex justify-between items-center">
+            <a class="text-xl sm:text-2xl font-bold font-display tracking-tight text-white flex items-center gap-1 group" href="#home">
+                <span>Sahrul</span><span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">.dev</span>
             </a>
-            <i class='bx bx-menu text-2xl text-slate-100 cursor-pointer md:hidden' id="menu-btn"></i>
+            
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#home" class="nav-link text-xs lg:text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Beranda</a>
+                <a href="#about" class="nav-link text-xs lg:text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Tentang</a>
+                <a href="#skills" class="nav-link text-xs lg:text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Keahlian</a>
+                <a href="#education" class="nav-link text-xs lg:text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Pendidikan</a>
+                <a href="#project" class="nav-link text-xs lg:text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Proyek</a>
+                <a href="#contact" class="nav-link text-xs lg:text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Kontak</a>
+            </nav>
+
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <a href="#contact"
+                    class="hidden md:inline-flex items-center justify-center gap-2 px-4.5 py-2 lg:px-5 lg:py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white text-xs lg:text-sm font-semibold rounded-xl shadow-lg shadow-indigo-600/25 transition-all duration-300 hover:-translate-y-0.5">
+                    <i class='bx bx-paper-plane text-sm lg:text-base'></i> Hubungi Saya
+                </a>
+                <button aria-label="Menu Toggle" id="menu-btn" class="p-2 text-2xl text-slate-200 cursor-pointer md:hidden focus:outline-none hover:text-indigo-400 transition-colors">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
+        <!-- Mobile Nav Menu -->
         <div id="mobile-menu"
-            class="absolute top-full left-0 w-full bg-slate-900/95 border-b border-slate-800 flex-col py-6 px-6 space-y-4 hidden md:hidden transition-all duration-300">
-            <a href="#home" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Home</a>
-            <a href="#about" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">About</a>
-            <a href="#skills" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Skills</a>
-            <a href="#education" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Education</a>
-            <a href="#project" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Projects</a>
-            <a href="#contact" class="mobile-link text-lg text-slate-300 hover:text-indigo-400 block">Contact</a>
+            class="absolute top-full left-0 w-full glass-nav border-b border-slate-800/90 flex-col py-5 px-6 space-y-3 hidden md:hidden transition-all duration-300 shadow-2xl">
+            <a href="#home" class="mobile-link text-sm font-medium text-slate-200 hover:text-indigo-400 block py-1.5 border-b border-slate-800/40">Beranda</a>
+            <a href="#about" class="mobile-link text-sm font-medium text-slate-200 hover:text-indigo-400 block py-1.5 border-b border-slate-800/40">Tentang Saya</a>
+            <a href="#skills" class="mobile-link text-sm font-medium text-slate-200 hover:text-indigo-400 block py-1.5 border-b border-slate-800/40">Keahlian Teknis</a>
+            <a href="#education" class="mobile-link text-sm font-medium text-slate-200 hover:text-indigo-400 block py-1.5 border-b border-slate-800/40">Pendidikan & Sertifikasi</a>
+            <a href="#project" class="mobile-link text-sm font-medium text-slate-200 hover:text-indigo-400 block py-1.5 border-b border-slate-800/40">Portofolio Proyek</a>
+            <a href="#contact" class="mobile-link text-sm font-medium text-slate-200 hover:text-indigo-400 block py-1.5">Kontak Saya</a>
         </div>
     </header>
 
-    <!-- Home Section -->
-    <section
-        class="min-h-screen pt-24 pb-12 md:pt-28 md:pb-16 px-6 md:px-16 flex flex-col-reverse md:flex-row justify-between items-center gap-10 md:gap-12 max-w-7xl mx-auto"
-        id="home">
-        <div class="w-full md:w-3/5 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
-            <h2 class="text-lg md:text-xl text-slate-400 font-medium mb-2">Welcome, I'm</h2>
-            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-slate-100">
-                Sahrul <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Web
-                    Dev</span>
-            </h1>
-            <p class="text-lg md:text-xl font-medium text-slate-300 mb-4 h-8">
-                <span id="typing-text" class="text-indigo-400"></span>
-            </p>
-            <p class="text-base text-slate-400 leading-relaxed max-w-xl mx-auto md:mx-0 mb-8 text-left">
-                I design and build reliable, high-performing web applications — turning complex requirements into clean
-                architecture and polished user experiences.
-            </p>
-            <div class="flex justify-center md:justify-start space-x-5 mb-8">
-                <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer"
-                    class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all"><i
-                        class='bx bxl-whatsapp'></i></a>
-                <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer"
-                    class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all"><i
-                        class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer"
-                    class="text-2xl text-slate-400 hover:text-indigo-400 hover:-translate-y-1 transition-all"><i
-                        class='bx bxl-linkedin-square'></i></a>
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-28 sm:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto flex flex-col justify-center relative z-10" id="home">
+        <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-8 sm:gap-12 lg:gap-16">
+            
+            <!-- Hero Text Content -->
+            <div class="w-full md:w-7/12 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-[11px] sm:text-xs font-semibold tracking-wide uppercase mb-5 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Terbuka Untuk Peluang Kerja & Kolaborasi
+                </div>
+
+                <h1 class="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight mb-4 text-white leading-tight">
+                    Halo, Saya <br class="hidden sm:inline" />
+                    <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                        Sahrul
+                    </span>
+                </h1>
+
+                <p class="text-base sm:text-xl font-medium text-slate-300 mb-5 min-h-[32px] flex items-center justify-center md:justify-start gap-2 flex-wrap">
+                    <span>Spesialisasi:</span>
+                    <span id="typing-text" class="text-indigo-400 font-bold border-b-2 border-indigo-500/40"></span>
+                </p>
+
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto md:mx-0 mb-7">
+                    Saya merancang dan membangun aplikasi web berkinerja tinggi, andal, dan modern — mengubah kebutuhan kompleks menjadi arsitektur bersih dan pengalaman pengguna yang luar biasa.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex justify-center md:justify-start items-center gap-3.5 sm:gap-4 mb-7">
+                    <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/50 hover:bg-slate-800 flex items-center justify-center text-lg sm:text-xl transition-all hover:-translate-y-1 shadow-md">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                    <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer" title="GitHub Profile" aria-label="GitHub"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-300 hover:text-white hover:border-indigo-500/50 hover:bg-slate-800 flex items-center justify-center text-lg sm:text-xl transition-all hover:-translate-y-1 shadow-md">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" aria-label="LinkedIn"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-slate-800 flex items-center justify-center text-lg sm:text-xl transition-all hover:-translate-y-1 shadow-md">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                    <button onclick="copyToClipboard('sahrulrul241@gmail.com', 'Email Sahrul')" title="Salin Email" aria-label="Salin Email"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-300 hover:text-indigo-400 hover:border-indigo-500/50 hover:bg-slate-800 flex items-center justify-center text-lg sm:text-xl transition-all hover:-translate-y-1 shadow-md">
+                        <i class='bx bx-envelope'></i>
+                    </button>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3.5 sm:gap-4 w-full sm:w-auto">
+                    <a href="#contact"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 bg-gradient-to-r from-indigo-600 via-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-sm sm:text-base font-semibold rounded-xl shadow-xl shadow-indigo-600/30 transition-all hover:-translate-y-0.5 w-full sm:w-auto">
+                        <i class='bx bx-send text-lg'></i> Hubungi Saya
+                    </a>
+                    <a href="#project"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-indigo-500/50 text-slate-200 text-sm sm:text-base font-semibold rounded-xl transition-all shadow-md w-full sm:w-auto">
+                        <i class='bx bx-layer text-lg text-indigo-400'></i> Lihat Proyek
+                    </a>
+                </div>
             </div>
 
-            <!-- CTAs & Download CV -->
-            <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                <a href="#contact"
-                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all hover:-translate-y-0.5">
-                    Contact Me
-                </a>
-                <a class="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-200 hover:bg-slate-800 font-medium rounded-lg transition-all"
-                    href="#project">
-                    View Projects
-                </a>
+            <!-- Hero Image & Floating Cards -->
+            <div class="w-full md:w-5/12 flex justify-center relative" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative">
+                    <!-- Glowing Gradient Frame -->
+                    <div class="p-1 sm:p-1.5 rounded-3xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-cyan-400 shadow-2xl shadow-indigo-500/20">
+                        <img src="./css/img/sahrul.png" alt="Foto Sahrul Web Developer"
+                            class="blob-profile w-48 h-56 xs:w-56 xs:h-68 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover bg-slate-900 shadow-inner">
+                    </div>
+
+                    <!-- Floating Badge Top Right -->
+                    <div class="absolute -top-3 -right-2 xs:-top-4 xs:-right-4 glass-card p-2.5 xs:p-3 rounded-xl sm:rounded-2xl border border-white/10 shadow-xl flex items-center gap-2.5 sm:gap-3">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-indigo-600/30 border border-indigo-500/40 flex items-center justify-center text-indigo-400 text-base sm:text-xl flex-shrink-0">
+                            <i class='bx bx-check-shield'></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] sm:text-xs text-slate-400 font-medium">Pengalaman</p>
+                            <p class="text-xs sm:text-sm font-bold text-white">Full-Stack & AI</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge Bottom Left -->
+                    <div class="absolute -bottom-3 -left-2 xs:-bottom-4 xs:-left-4 glass-card p-2.5 xs:p-3.5 rounded-xl sm:rounded-2xl border border-white/10 shadow-xl flex items-center gap-2.5 sm:gap-3">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-cyan-600/30 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-base sm:text-xl flex-shrink-0">
+                            <i class='bx bx-bot'></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] sm:text-xs text-slate-400 font-medium">Spesialis</p>
+                            <p class="text-xs sm:text-sm font-bold text-white">FastAPI & Integrasi AI</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-        <div class="w-full md:w-2/5 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
-            <img src="./css/img/sahrul.png" alt="Sahrul's photo"
-                class="blob-animation w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 object-cover border-4 border-slate-800 shadow-2xl shadow-indigo-500/10">
+
+        <!-- Quick Stats Banner -->
+        <div class="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card p-4 sm:p-5 rounded-xl sm:rounded-2xl text-center border border-slate-800">
+                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display text-indigo-400 mb-1">6+</h3>
+                <p class="text-[11px] sm:text-xs md:text-sm text-slate-400 font-medium">Proyek Web Completed</p>
+            </div>
+            <div class="glass-card p-4 sm:p-5 rounded-xl sm:rounded-2xl text-center border border-slate-800">
+                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display text-cyan-400 mb-1">3+</h3>
+                <p class="text-[11px] sm:text-xs md:text-sm text-slate-400 font-medium">Tahun Pengalaman Coding</p>
+            </div>
+            <div class="glass-card p-4 sm:p-5 rounded-xl sm:rounded-2xl text-center border border-slate-800">
+                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display text-purple-400 mb-1">10+</h3>
+                <p class="text-[11px] sm:text-xs md:text-sm text-slate-400 font-medium">Tech Stack Dikuasai</p>
+            </div>
+            <div class="glass-card p-4 sm:p-5 rounded-xl sm:rounded-2xl text-center border border-slate-800">
+                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display text-emerald-400 mb-1">100%</h3>
+                <p class="text-[11px] sm:text-xs md:text-sm text-slate-400 font-medium">Komitmen Kode Bersih</p>
+            </div>
         </div>
     </section>
-    <!-- About Section -->
-    <section class="py-16 md:py-24 bg-slate-950/40 px-6 md:px-16 border-t border-b border-slate-800" id="about">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
-            <div class="w-full md:w-5/12 flex justify-center" data-aos="fade-right" data-aos-duration="1000">
-                <img src="./css/img/sahrul.png" alt="Photo of Sahrul"
-                    class="w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-2xl shadow-2xl border border-slate-800">
-            </div>
-            <div class="w-full md:w-7/12 text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
-                <h3
-                    class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-3 text-white">
-                    <i class='bx bx-user-circle text-indigo-500'></i> About Me
-                </h3>
 
-                <div class="space-y-4 text-slate-400 leading-relaxed text-base text-left">
+    <!-- About Section -->
+    <section class="py-16 sm:py-24 md:py-28 bg-slate-950/70 border-t border-b border-slate-800/80 px-4 sm:px-6 lg:px-12 relative z-10" id="about">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            
+            <!-- About Image -->
+            <div class="w-full lg:w-5/12 flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                    <img src="./css/img/sahrul.png" alt="Sahrul - Web Developer"
+                        class="relative w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-2xl shadow-2xl border border-slate-700/60 bg-slate-900">
+                </div>
+            </div>
+
+            <!-- About Text -->
+            <div class="w-full lg:w-7/12 text-center lg:text-left" data-aos="fade-left" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-3">
+                    <i class='bx bx-user-pin text-sm'></i> Tentang Saya
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white mb-5 leading-tight">
+                    Mengubah Ide Kompleks Menjadi Solusi Web Digital Scalable
+                </h2>
+
+                <div class="space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base text-left">
                     <p>
-                        I'm Sahrul, an Informatics student and passionate Full-Stack Web Developer based in Indonesia.
-                        My journey in technology is driven by a deep curiosity for solving real-world challenges through
-                        clean code, scalable architecture, and intuitive user interface designs.
+                        Saya <strong class="text-white font-semibold">Sahrul</strong>, seorang mahasiswa Informatika dan Full-Stack Web Developer yang berdomisili di Indonesia. Perjalanan saya di dunia teknologi didorong oleh rasa ingin tahu yang mendalam untuk menyelesaikan tantangan dunia nyata melalui kode yang bersih, arsitektur yang tangguh, dan desain antarmuka pengguna yang intuitif.
                     </p>
                     <p>
-                        Over the course of my academic and practical experience, I have developed expertise across
-                        modern web stacks — spanning from front-end user experience engineering with React and Tailwind
-                        CSS to robust back-end systems using FastAPI and PHP. I specialize in integrating generative AI
-                        models (such as LLMs and Speech Synthesis pipelines) into seamless web applications.
+                        Sepanjang pengalaman akademis dan praktis, saya telah mengembangkan keahlian di berbagai stack web modern — mulai dari rekayasa antarmuka pengguna front-end menggunakan <span class="text-indigo-300 font-medium">React, Next.js, dan Tailwind CSS</span> hingga sistem back-end berkinerja tinggi dengan <span class="text-indigo-300 font-medium">FastAPI (Python) dan Laravel (PHP)</span>. Saya juga mengkhususkan diri dalam mengintegrasikan model Generative AI (seperti LLM dan pipeline Sintesis Suara) ke dalam aplikasi web nyata.
                     </p>
                     <p>
-                        I place high value on writing maintainable code, implementing proper database relations, and
-                        building efficient asynchronous APIs. Beyond technical implementation, I approach every project
-                        with an emphasis on performance optimization, responsive design, and user-centered solutions.
+                        Saya mengutamakan penulisan kode yang mudah dipelihara, implementasi relasi basis data yang tepat, dan komunikasi API asinkron yang efisien. Di luar aspek teknis, saya mendekati setiap proyek dengan fokus pada optimasi performa, desain responsif, dan solusi berpusat pada pengguna.
                     </p>
                 </div>
 
-                <div class="mt-8 text-center md:text-left">
+                <!-- Feature Pillars Grid -->
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                    <div class="glass-card p-4 rounded-xl border border-slate-800">
+                        <i class='bx bx-code-block text-2xl text-indigo-400 mb-2 block'></i>
+                        <h4 class="text-sm font-bold text-white mb-1">Arsitektur Bersih</h4>
+                        <p class="text-xs text-slate-400 leading-normal">REST API cepat & scalable dengan FastAPI & Laravel.</p>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl border border-slate-800">
+                        <i class='bx bx-layout text-2xl text-cyan-400 mb-2 block'></i>
+                        <h4 class="text-sm font-bold text-white mb-1">UI/UX Modern</h4>
+                        <p class="text-xs text-slate-400 leading-normal">Desain responsif & interaktif dengan React & Tailwind CSS.</p>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl border border-slate-800">
+                        <i class='bx bx-bot text-2xl text-purple-400 mb-2 block'></i>
+                        <h4 class="text-sm font-bold text-white mb-1">Integrasi AI</h4>
+                        <p class="text-xs text-slate-400 leading-normal">Integrasi LLM, Text-to-Speech & otomasi pipeline data.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center lg:text-left">
                     <a href="#contact"
-                        class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all hover:-translate-y-0.5">
-                        Let's Talk & Collaborate
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-indigo-600/25 transition-all hover:-translate-y-0.5 w-full sm:w-auto">
+                        <i class='bx bx-conversation text-lg'></i> Diskusi & Kolaborasi Proyek
                     </a>
                 </div>
             </div>
@@ -202,384 +278,573 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="py-16 md:py-24 px-6 md:px-16 max-w-7xl mx-auto" id="skills">
-        <h3 class="text-2xl md:text-3xl font-bold text-center mb-3 flex items-center justify-center gap-3"
-            data-aos="fade-down">
-            <i class='bx bx-code-alt text-indigo-500'></i> Technical Skills
-        </h3>
-        <p class="text-center text-slate-400 text-sm max-w-xl mx-auto mb-10 md:mb-12">A comprehensive technology stack
-            enabling me to deliver end-to-end web solutions with confidence.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
-                data-aos="fade-up" data-aos-delay="100">
-                <i class='bx bx-server text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Backend Development</h5>
-                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>Python & FastAPI</li>
-                    <li>PHP & Laravel</li>
-                    <li>REST API Design</li>
-                </ul>
+    <section class="py-16 sm:py-24 md:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto relative z-10" id="skills">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-down">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-3">
+                <i class='bx bx-wrench text-sm'></i> Keahlian Teknis
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
-                data-aos="fade-up" data-aos-delay="150">
-                <i class='bx bx-desktop text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Frontend Development</h5>
-                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>JavaScript</li>
-                    <li>React & Next.js</li>
-                    <li>HTML5, CSS3 & Tailwind CSS</li>
-                </ul>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white mb-3 sm:mb-4">
+                Teknologi & Stack yang Saya Kuasai
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base">
+                Rangkaian alat dan teknologi modern yang memungkinkan saya memberikan solusi web berkualitas dari ujung ke ujung.
+            </p>
+        </div>
+
+        <!-- Skill Filter Tabs -->
+        <div class="flex overflow-x-auto sm:flex-wrap gap-2 mb-8 sm:mb-10 pb-2 scrollbar-none justify-start sm:justify-center w-full" data-aos="fade-up">
+            <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-indigo-600 text-white shadow-lg shadow-indigo-600/30" data-filter="all">Semua Tech</button>
+            <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-slate-800/80 text-slate-400 hover:bg-slate-800" data-filter="backend">Backend</button>
+            <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-slate-800/80 text-slate-400 hover:bg-slate-800" data-filter="frontend">Frontend</button>
+            <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-slate-800/80 text-slate-400 hover:bg-slate-800" data-filter="database">Database</button>
+            <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-slate-800/80 text-slate-400 hover:bg-slate-800" data-filter="ai">AI & Media</button>
+            <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-slate-800/80 text-slate-400 hover:bg-slate-800" data-filter="tools">DevOps & Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            
+            <!-- Skill Card 1: Backend -->
+            <div class="skill-card glass-card glass-card-hover p-5 sm:p-6 rounded-2xl border border-slate-800" data-category="backend" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl sm:text-2xl">
+                        <i class='bx bx-server'></i>
+                    </div>
+                    <span class="text-xs font-semibold text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">Backend Core</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-white mb-2">Backend Development</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Pengembangan sistem server-side cepat, aman, dan scalable menggunakan arsitektur RESTful & Asyncio.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Python</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">FastAPI</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">PHP</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Laravel</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">REST API Design</span>
+                </div>
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
-                data-aos="fade-up" data-aos-delay="200">
-                <i class='bx bx-data text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Database Management</h5>
-                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>MySQL & PostgreSQL</li>
-                    <li>SQLAlchemy & SQLite</li>
-                </ul>
+
+            <!-- Skill Card 2: Frontend -->
+            <div class="skill-card glass-card glass-card-hover p-5 sm:p-6 rounded-2xl border border-slate-800" data-category="frontend" data-aos="fade-up" data-aos-delay="150">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl sm:text-2xl">
+                        <i class='bx bx-desktop'></i>
+                    </div>
+                    <span class="text-xs font-semibold text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md border border-cyan-500/20">Frontend UI/UX</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-white mb-2">Frontend Development</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Pembuatan antarmuka aplikasi web modern, responsif, dan kaya dengan performa tinggi.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">JavaScript (ES6+)</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">React & Next.js</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Vite</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Tailwind CSS</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">HTML5 / CSS3</span>
+                </div>
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
-                data-aos="fade-up" data-aos-delay="250">
-                <i class='bx bx-play-circle text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Audio & Media</h5>
-                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>FFmpeg Processing</li>
-                    <li>RSS Feed Integration</li>
-                </ul>
+
+            <!-- Skill Card 3: Database -->
+            <div class="skill-card glass-card glass-card-hover p-5 sm:p-6 rounded-2xl border border-slate-800" data-category="database" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl sm:text-2xl">
+                        <i class='bx bx-data'></i>
+                    </div>
+                    <span class="text-xs font-semibold text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20">Database System</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-white mb-2">Database Management</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Model data relasional yang konsisten, optimasi kueri SQL, dan integritas transaksi.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">MySQL</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">PostgreSQL</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">SQLAlchemy</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Alembic</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">SQLite</span>
+                </div>
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
-                data-aos="fade-up" data-aos-delay="300">
-                <i class='bx bx-cog text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">Tools & DevOps</h5>
-                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>Git & GitHub</li>
-                    <li>Postman & Composer</li>
-                </ul>
+
+            <!-- Skill Card 4: AI & Media -->
+            <div class="skill-card glass-card glass-card-hover p-5 sm:p-6 rounded-2xl border border-slate-800" data-category="ai" data-aos="fade-up" data-aos-delay="250">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl sm:text-2xl">
+                        <i class='bx bx-bot'></i>
+                    </div>
+                    <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">AI Integrator</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-white mb-2">AI & Pemrosesan Media</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Integrasi layanan AI canggih (LLM, TTS, Voice Synthesis) dan pemrosesan stream audio/video.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">OpenAI API</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Qwen & DeepSeek AI</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">ElevenLabs (TTS)</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">FFmpeg Audio Pipeline</span>
+                </div>
             </div>
-            <div class="bg-slate-800/50 border border-slate-800 p-7 rounded-xl hover:border-indigo-500/40 hover:-translate-y-1 transition-all"
-                data-aos="fade-up" data-aos-delay="350">
-                <i class='bx bx-bot text-4xl text-indigo-500 mb-4 inline-block'></i>
-                <h5 class="text-lg font-semibold mb-3">AI & Integration</h5>
-                <ul class="text-slate-400 text-sm leading-relaxed space-y-1.5">
-                    <li>OpenAI API & Qwen AI</li>
-                    <li>ElevenLabs (TTS) & Prompt Engineering</li>
-                </ul>
+
+            <!-- Skill Card 5: Tools & DevOps -->
+            <div class="skill-card glass-card glass-card-hover p-5 sm:p-6 rounded-2xl border border-slate-800" data-category="tools" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl sm:text-2xl">
+                        <i class='bx bx-cog'></i>
+                    </div>
+                    <span class="text-xs font-semibold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">Developer Tools</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-white mb-2">Tools & DevOps</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Workflow pengembangan aplikasi profesional, manajemen versi, dan pengujian API.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Git & GitHub</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Postman</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Composer</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Playwright Testing</span>
+                </div>
             </div>
+
+            <!-- Skill Card 6: Payment & Third-Party API -->
+            <div class="skill-card glass-card glass-card-hover p-5 sm:p-6 rounded-2xl border border-slate-800" data-category="backend" data-aos="fade-up" data-aos-delay="350">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-rose-600/20 border border-rose-500/30 flex items-center justify-center text-rose-400 text-xl sm:text-2xl">
+                        <i class='bx bx-credit-card-front'></i>
+                    </div>
+                    <span class="text-xs font-semibold text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded-md border border-rose-500/20">Integration</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-white mb-2">Integrasi API & Payment</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Menghubungkan layanan pihak ketiga seperti Payment Gateway Xendit dan RSS Feeds.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">Xendit Gateway</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">SSE & WebSockets</span>
+                    <span class="tech-tag bg-slate-900 border border-slate-700/80 text-slate-300 text-xs px-2.5 py-1 rounded-lg font-medium">RSS Feed Parser</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Education & Certifications Section -->
-    <section class="py-16 md:py-24 bg-slate-950/40 border-t border-b border-slate-800 px-6 md:px-16" id="education">
+    <section class="py-16 sm:py-24 md:py-28 bg-slate-950/70 border-t border-b border-slate-800/80 px-4 sm:px-6 lg:px-12 relative z-10" id="education">
         <div class="max-w-7xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-12 flex items-center justify-center gap-3"
-                data-aos="fade-down">
-                <i class='bx bx-book-open text-indigo-500'></i> Education & Credentials
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Education -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl" data-aos="fade-right">
-                    <span class="text-xs font-semibold text-indigo-400 tracking-wider uppercase">Degree Program</span>
-                    <h4 class="text-xl font-bold mt-1 text-white">Bachelor of Computer Science in Informatics</h4>
-                    <p class="text-slate-300 text-sm">Universitas Hamzanwadi</p>
-                    <p class="text-slate-500 text-xs mt-1">Expected Graduation: 2027</p>
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-down">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-3">
+                    <i class='bx bx-book-open text-sm'></i> Pendidikan & Kredensial
                 </div>
-                <!-- Certification -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl" data-aos="fade-left">
-                    <span class="text-xs font-semibold text-indigo-400 tracking-wider uppercase">Bootcamp
-                        Certification</span>
-                    <h4 class="text-xl font-bold mt-1 text-white">Digital Career Bootcamp - AI & Backend</h4>
-                    <p class="text-slate-300 text-sm">MAXY Academy (2026)</p>
-                    <p class="text-slate-400 text-xs mt-2">Focused on Advanced RESTful API design, real-time
-                        communication, and integrating LLM/AI services into backend architectures.</p>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white mb-3 sm:mb-4">
+                    Latar Belakang Akademis & Sertifikasi
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Fondasi ilmu pengetahuan komputer formal dan pelatihan intensif profesional yang mendasari keahlian saya.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Education Card -->
+                <div class="glass-card glass-card-hover p-6 sm:p-8 rounded-2xl border border-slate-800 relative" data-aos="fade-right">
+                    <div class="flex items-center gap-3.5 sm:gap-4 mb-4">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl sm:text-2xl flex-shrink-0">
+                            <i class='bx bx-building-house'></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] sm:text-xs font-bold text-indigo-400 uppercase tracking-wider">Program Sarjana (S1)</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-0.5">S1 Teknik Informatika</h3>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-800 pt-4">
+                        <p class="text-slate-200 text-sm sm:text-base font-semibold">Universitas Hamzanwadi</p>
+                        <p class="text-slate-400 text-xs mt-1 flex items-center gap-1.5">
+                            <i class='bx bx-calendar text-indigo-400'></i> 2023 – Sekarang
+                        </p>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+                            Fokus pada dasar-dasar ilmu komputer, Rekayasa Perangkat Lunak, Pemrograman Berorientasi Objek, Pemodelan Basis Data, dan Pengembangan Aplikasi Web modern.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certification Card -->
+                <div class="glass-card glass-card-hover p-6 sm:p-8 rounded-2xl border border-slate-800 relative" data-aos="fade-left">
+                    <div class="flex items-center gap-3.5 sm:gap-4 mb-4">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl sm:text-2xl flex-shrink-0">
+                            <i class='bx bx-award'></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] sm:text-xs font-bold text-cyan-400 uppercase tracking-wider">Sertifikasi Bootcamp</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-0.5">Digital Career Bootcamp - AI & Backend</h3>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-800 pt-4">
+                        <p class="text-slate-200 text-sm sm:text-base font-semibold">MAXY Academy (2026)</p>
+                        <p class="text-slate-400 text-xs mt-1 flex items-center gap-1.5">
+                            <i class='bx bx-badge-check text-cyan-400'></i> Sertifikat Kelulusan Resmi
+                        </p>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+                            Pelatihan intensif berorientasi industri yang berfokus pada Perancangan RESTful API tingkat lanjut, komunikasi data real-time, arsitektur pub-sub, dan integrasi model LLM ke dalam arsitektur backend scalable.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Section -->
-    <section class="py-16 md:py-24 bg-slate-950 px-6 md:px-16 border-b border-slate-800" id="project">
-        <div class="max-w-7xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-12 flex items-center justify-center gap-3"
-                data-aos="fade-down">
-                <i class='bx bx-briefcase text-indigo-500'></i> Project Portfolio
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
-                <!-- Card 1: Curricula AI -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-indigo-500/40 transition-all duration-300"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <div>
-                        <div class="overflow-hidden h-52">
-                            <img src="./css/img/3.png" alt="Curricula AI"
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h5 class="text-xl font-semibold mb-2 text-white">Curricula AI</h5>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                                AI-powered curriculum and learning material generation platform featuring real-time
-                                progress streaming, asyncio pub-sub architecture, and an interactive PDF
-                                previewer/exporter.
-                            </p>
-
-                            <!-- Tech Stack Badges Lengkap -->
-                            <div class="flex flex-wrap gap-1.5 mb-6">
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">FastAPI</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">OpenAI
-                                    API</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">React
-                                    19</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Vite</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">SQLAlchemy</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Alembic</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">SQLite
-                                    / MySQL</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Asyncio
-                                    & SSE</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Playwright</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">ReportLab</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">pdfjs-dist</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Action Buttons -->
-                    <div class="p-6 pt-0 flex gap-3">
-                        <a href="https://ai.maxy.academy/curricula-ai/" target="_blank" rel="noopener noreferrer"
-                            class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg text-sm transition-all shadow-md">
-                            <i class='bx bx-link-external'></i> Live Demo
-                        </a>
-                        <a href="https://github.com/sahrul223344/circula_ai" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-lg text-sm transition-all border border-slate-700">
-                            <i class='bx bxl-github text-lg'></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 2: Voxflow AI -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-indigo-500/40 transition-all duration-300"
-                    data-aos="zoom-in" data-aos-delay="200">
-                    <div>
-                        <div class="overflow-hidden h-52">
-                            <img src="./css/img/4.png" alt="Voxflow AI"
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h5 class="text-xl font-semibold mb-2 text-white">Voxflow AI (Podflow AI)</h5>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                                AI-powered podcast generation automation platform that processes text/RSS inputs into
-                                integrated voice recordings through an end-to-end audio processing pipeline.
-                            </p>
-
-                            <!-- Tech Stack Badges Lengkap -->
-                            <div class="flex flex-wrap gap-1.5 mb-6">
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">FastAPI</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Qwen
-                                    AI</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Agnes
-                                    AI</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">ElevenLabs
-                                    (TTS)</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">FFmpeg</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">REST
-                                    API</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">RSS
-                                    Feed Integration</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Relational
-                                    Database</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Git
-                                    & GitHub</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Action Buttons -->
-                    <div class="p-6 pt-0 flex gap-3">
-                        <a href="https://voxflow-frontend.vercel.app/" target="_blank" rel="noopener noreferrer"
-                            class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg text-sm transition-all shadow-md">
-                            <i class='bx bx-link-external'></i> Live Demo
-                        </a>
-                        <a href="https://github.com/sahrul223344/Fodcash_Ai_Beckend" target="_blank"
-                            rel="noopener noreferrer"
-                            class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-lg text-sm transition-all border border-slate-700">
-                            <i class='bx bxl-github text-lg'></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 3: Sales Purchase Cycle -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-indigo-500/40 transition-all duration-300"
-                    data-aos="zoom-in" data-aos-delay="200">
-                    <div>
-                        <div class="overflow-hidden h-52">
-                            <img src="./css/img/5.png" alt="Sales Purchase Cycle"
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h5 class="text-xl font-semibold mb-2 text-white">Sales & Purchase Cycle System</h5>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                                Web-based management system for handling sales and purchase transaction cycles,
-                                integrated with DataTables Server-Side processing, Xendit payment gateway API, and
-                                DeepSeek AI API for automated reporting and analytics.
-                            </p>
-
-                            <!-- Tech Stack Badges Lengkap -->
-                            <div class="flex flex-wrap gap-1.5 mb-6">
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">PHP</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Laravel</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">MySQL</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">JavaScript</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Bootstrap</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">DataTables
-                                    Server-Side</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Xendit
-                                    API</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">DeepSeek
-                                    AI API</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">Git</span>
-                                <span
-                                    class="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-md font-medium">RESTful
-                                    API</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Action Buttons -->
-                    <div class="p-6 pt-0 flex gap-3">
-                        <a href="https://github.com/sahrul223344/sales-purchase-cycle-laravel" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-lg text-sm transition-all border border-slate-700">
-                            <i class='bx bxl-github text-lg'></i>
-                        </a>
-                    </div>
-                </div>
-
+    <!-- Projects Section -->
+    <section class="py-16 sm:py-24 md:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto relative z-10" id="project">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-down">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-3">
+                <i class='bx bx-folder-open text-sm'></i> Portofolio Proyek
             </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white mb-3 sm:mb-4">
+                Hasil Karya & Proyek Pilihan
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base">
+                Koleksi aplikasi web nyata dan platform berbasis AI yang telah saya rancang, kembangkan, dan selesaikan.
+            </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="flex overflow-x-auto sm:flex-wrap gap-2 mb-8 sm:mb-10 pb-2 scrollbar-none justify-start sm:justify-center w-full" data-aos="fade-up">
+            <button class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-indigo-600 text-white shadow-lg shadow-indigo-600/30" data-filter="all">Semua Proyek</button>
+            <button class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-slate-800/80 text-slate-400 hover:bg-slate-800" data-filter="ai">Aplikasi AI</button>
+            <button class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap bg-slate-800/80 text-slate-400 hover:bg-slate-800" data-filter="web">Web & Laravel</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+            <!-- Project 1: Curricula AI -->
+            <div class="project-card glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800"
+                data-category="ai" data-aos="zoom-in" data-aos-delay="100">
+                <div>
+                    <div class="relative overflow-hidden h-48 sm:h-52 group">
+                        <img src="./css/img/3.png" alt="Curricula AI - Generasi Kurikulum AI"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+                        <span class="absolute top-3.5 right-3.5 bg-indigo-600/90 text-white text-[11px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full font-semibold border border-indigo-400/40">
+                            AI Platform
+                        </span>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Curricula AI</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Platform generasi kurikulum & materi pembelajaran cerdas berbasis AI dengan fitur streaming progres real-time, arsitektur asyncio pub-sub, serta viewer/exporter PDF interaktif.
+                        </p>
+
+                        <!-- Tech Stack Badges -->
+                        <div class="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">FastAPI</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">OpenAI API</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">React 19</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">Asyncio & SSE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="p-5 sm:p-6 pt-0 flex gap-2.5 sm:gap-3">
+                    <button data-project="curricula-ai"
+                        class="open-project-modal flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white font-semibold py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow-md">
+                        <i class='bx bx-info-circle text-base'></i> Detail Proyek
+                    </button>
+                    <a href="https://ai.maxy.academy/curricula-ai/" target="_blank" rel="noopener noreferrer" title="Live Demo" aria-label="Live Demo"
+                        class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-indigo-400 px-3.5 py-2.5 rounded-xl text-sm transition-all border border-slate-700">
+                        <i class='bx bx-link-external text-lg'></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: Voxflow AI -->
+            <div class="project-card glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800"
+                data-category="ai" data-aos="zoom-in" data-aos-delay="200">
+                <div>
+                    <div class="relative overflow-hidden h-48 sm:h-52 group">
+                        <img src="./css/img/4.png" alt="Voxflow AI - Podcast AI Generator"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+                        <span class="absolute top-3.5 right-3.5 bg-cyan-600/90 text-white text-[11px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full font-semibold border border-cyan-400/40">
+                            Audio & Voice AI
+                        </span>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Voxflow AI (Podflow)</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Platform otomatisasi pembuatan podcast cerdas berbasis AI yang memproses input teks/RSS menjadi rekaman suara terintegrasi melalui pipeline audio FFmpeg.
+                        </p>
+
+                        <!-- Tech Stack Badges -->
+                        <div class="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">FastAPI</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">Qwen AI</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">ElevenLabs (TTS)</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">FFmpeg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="p-5 sm:p-6 pt-0 flex gap-2.5 sm:gap-3">
+                    <button data-project="voxflow-ai"
+                        class="open-project-modal flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white font-semibold py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow-md">
+                        <i class='bx bx-info-circle text-base'></i> Detail Proyek
+                    </button>
+                    <a href="https://voxflow-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" title="Live Demo" aria-label="Live Demo"
+                        class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3.5 py-2.5 rounded-xl text-sm transition-all border border-slate-700">
+                        <i class='bx bx-link-external text-lg'></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: Sales Purchase Cycle -->
+            <div class="project-card glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800"
+                data-category="web" data-aos="zoom-in" data-aos-delay="300">
+                <div>
+                    <div class="relative overflow-hidden h-48 sm:h-52 group">
+                        <img src="./css/img/5.png" alt="Sistem Siklus Penjualan Pembelian"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+                        <span class="absolute top-3.5 right-3.5 bg-purple-600/90 text-white text-[11px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full font-semibold border border-purple-400/40">
+                            Enterprise Web
+                        </span>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Siklus Penjualan & Pembelian</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Sistem manajemen transaksi penjualan & pembelian web enterprise terintegrasi DataTables Server-Side, Xendit Payment Gateway, dan analitik AI DeepSeek.
+                        </p>
+
+                        <!-- Tech Stack Badges -->
+                        <div class="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">PHP</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">Laravel</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">MySQL</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">Xendit API</span>
+                            <span class="bg-indigo-950/90 border border-indigo-700/50 text-indigo-300 text-[11px] sm:text-xs px-2.5 py-1 rounded-md font-medium">DeepSeek AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="p-5 sm:p-6 pt-0 flex gap-2.5 sm:gap-3">
+                    <button data-project="sales-purchase"
+                        class="open-project-modal flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white font-semibold py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow-md">
+                        <i class='bx bx-info-circle text-base'></i> Detail Proyek
+                    </button>
+                    <a href="https://github.com/sahrul223344/sales-purchase-cycle-laravel" target="_blank" rel="noopener noreferrer" title="Kode Repositori" aria-label="GitHub"
+                        class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-purple-400 px-3.5 py-2.5 rounded-xl text-sm transition-all border border-slate-700">
+                        <i class='bx bxl-github text-lg'></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
+
+    <!-- Modal Detail Proyek Interaktif -->
+    <div id="project-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md">
+        <div class="modal-container glass-card w-full max-w-xl md:max-w-3xl rounded-2xl sm:rounded-3xl border border-slate-700 shadow-2xl overflow-hidden flex flex-col max-h-[85vh] sm:max-h-[90vh]">
+            
+            <!-- Modal Header -->
+            <div class="p-4 sm:p-5 border-b border-slate-800 flex justify-between items-center bg-slate-900/80">
+                <div class="flex items-center gap-2">
+                    <i class='bx bx-folder text-indigo-400 text-xl sm:text-2xl'></i>
+                    <h3 id="modal-title" class="text-lg sm:text-xl font-bold font-display text-white">Detail Proyek</h3>
+                </div>
+                <button id="modal-close-btn" aria-label="Tutup modal" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 flex items-center justify-center text-lg sm:text-xl transition-all">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-4 sm:p-6 overflow-y-auto space-y-5 sm:space-y-6">
+                <div class="relative h-44 sm:h-64 lg:h-72 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-800">
+                    <img id="modal-img" src="" alt="Pratinjau Proyek" class="w-full h-full object-cover">
+                </div>
+
+                <div>
+                    <h4 id="modal-subtitle" class="text-base sm:text-lg font-bold text-indigo-300 mb-2"></h4>
+                    <p id="modal-desc" class="text-slate-300 text-xs sm:text-sm leading-relaxed"></p>
+                </div>
+
+                <!-- Highlights Bullet List -->
+                <div>
+                    <h5 class="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">Fitur Utama & Keunggulan Arsitektur:</h5>
+                    <ul id="modal-highlights" class="space-y-2"></ul>
+                </div>
+
+                <!-- Tech Badges Container -->
+                <div>
+                    <h5 class="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">Teknologi yang Digunakan:</h5>
+                    <div id="modal-tech" class="flex flex-wrap gap-1.5 sm:gap-2"></div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 sm:p-5 border-t border-slate-800 flex flex-wrap gap-2.5 sm:gap-3 bg-slate-900/80 justify-end">
+                <a id="modal-demo-btn" href="#" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl text-xs sm:text-sm transition-all shadow-md">
+                    <i class='bx bx-link-external'></i> Live Demo
+                </a>
+                <a id="modal-github-btn" href="#" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-xl text-xs sm:text-sm transition-all border border-slate-700">
+                    <i class='bx bxl-github text-base sm:text-lg'></i> GitHub
+                </a>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Contact Section -->
-    <section class="py-16 md:py-24 px-6 md:px-16" id="contact">
-        <div class="max-w-xl mx-auto bg-slate-800/40 border border-slate-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl"
-            data-aos="fade-up">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Let's Work Together</h2>
-            <p class="text-center text-slate-400 text-sm mb-8">Have a project in mind or an opportunity to discuss? Send
-                a message and I'll respond promptly.</p>
+    <section class="py-16 sm:py-24 md:py-28 px-4 sm:px-6 lg:px-12 relative z-10" id="contact">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12" data-aos="fade-down">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-3">
+                    <i class='bx bx-envelope text-sm'></i> Mari Bekerja Sama
+                </div>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white mb-3 leading-tight">
+                    Hubungi Saya & Berkolaborasi
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Punya ide proyek menarik, peluang karir, atau pertanyaan? Kirimkan pesan di bawah ini atau hubungi langsung via media sosial.
+                </p>
+            </div>
 
-            <!-- Working Formspree Form (Ganti YOUR_FORM_ID) -->
-            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
-                <div>
-                    <label for="name" class="block mb-2 text-sm text-slate-200 font-medium">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required
-                        class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none text-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+                
+                <!-- Quick Contact Info Side -->
+                <div class="lg:col-span-5 space-y-3.5 sm:space-y-4" data-aos="fade-right">
+                    
+                    <!-- WhatsApp Card -->
+                    <div class="glass-card p-4 sm:p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+                        <div class="flex items-center gap-3.5 sm:gap-4">
+                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl sm:text-2xl flex-shrink-0">
+                                <i class='bx bxl-whatsapp'></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] sm:text-xs text-slate-400 font-medium">WhatsApp Respon Cepat</p>
+                                <p class="text-xs sm:text-sm font-bold text-white">+62 838-3310-4245</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp"
+                            class="p-2 sm:p-2.5 rounded-xl bg-slate-800 hover:bg-emerald-600 text-emerald-400 hover:text-white transition-all">
+                            <i class='bx bx-right-arrow-alt text-lg sm:text-xl'></i>
+                        </a>
+                    </div>
+
+                    <!-- Email Card -->
+                    <div class="glass-card p-4 sm:p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+                        <div class="flex items-center gap-3.5 sm:gap-4">
+                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl sm:text-2xl flex-shrink-0">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] sm:text-xs text-slate-400 font-medium">Alamat Email Kontak</p>
+                                <a href="mailto:sahrulrul241@gmail.com" class="text-xs sm:text-sm font-bold text-white hover:text-indigo-400 transition-colors">sahrulrul241@gmail.com</a>
+                            </div>
+                        </div>
+                        <button onclick="copyToClipboard('sahrulrul241@gmail.com', 'Alamat Email')"
+                            class="p-2 sm:p-2.5 rounded-xl bg-slate-800 hover:bg-indigo-600 text-indigo-400 hover:text-white transition-all" title="Salin Email" aria-label="Salin Email">
+                            <i class='bx bx-copy text-lg sm:text-xl'></i>
+                        </button>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="glass-card p-4 sm:p-5 rounded-2xl border border-slate-800 flex items-center gap-3.5 sm:gap-4">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl sm:text-2xl flex-shrink-0">
+                            <i class='bx bx-map'></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] sm:text-xs text-slate-400 font-medium">Lokasi & Ketersediaan</p>
+                            <p class="text-xs sm:text-sm font-bold text-white">Indonesia (Tersedia Remote & On-site)</p>
+                        </div>
+                    </div>
+
                 </div>
-                <div>
-                    <label for="email" class="block mb-2 text-sm text-slate-200 font-medium">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter a valid email address" required
-                        class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none text-sm">
+
+                <!-- Contact Form Side -->
+                <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-800 shadow-xl" data-aos="fade-left">
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 sm:space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                            <div>
+                                <label for="name" class="block mb-2 text-xs font-semibold uppercase tracking-wider text-slate-300">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required
+                                    class="w-full px-4 py-3 bg-slate-900/90 border border-slate-700/80 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-xl outline-none text-sm transition-all">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-xs font-semibold uppercase tracking-wider text-slate-300">Alamat Email</label>
+                                <input type="email" id="email" name="email" placeholder="contoh@email.com" required
+                                    class="w-full px-4 py-3 bg-slate-900/90 border border-slate-700/80 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-xl outline-none text-sm transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 text-xs font-semibold uppercase tracking-wider text-slate-300">Subjek Pesan</label>
+                            <input type="text" id="subject" name="subject" placeholder="Diskusi Proyek / Penawaran Kerjasama" required
+                                class="w-full px-4 py-3 bg-slate-900/90 border border-slate-700/80 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-xl outline-none text-sm transition-all">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 text-xs font-semibold uppercase tracking-wider text-slate-300">Pesan Anda</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tuliskan detail pesan atau kebutuhan proyek Anda di sini..." required
+                                class="w-full px-4 py-3 bg-slate-900/90 border border-slate-700/80 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-xl outline-none text-sm resize-none transition-all"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full py-3.5 px-6 bg-gradient-to-r from-indigo-600 via-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition-all text-sm flex items-center justify-center gap-2">
+                            <i class='bx bx-paper-plane text-lg'></i> Kirim Pesan SEKARANG
+                        </button>
+                        <p id="form-status" class="text-center text-sm hidden mt-3 font-medium"></p>
+                    </form>
                 </div>
-                <div>
-                    <label for="message" class="block mb-2 text-sm text-slate-200 font-medium">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required
-                        class="w-full px-4 py-3 bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 rounded-lg outline-none text-sm resize-none"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all text-sm">
-                    Send Message
-                </button>
-                <p id="form-status" class="text-center text-sm text-indigo-400 hidden mt-3"></p>
-            </form>
+
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-10 md:py-12 px-6 md:px-16 text-center">
-        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6">
-            <a href="#home" class="text-sm text-slate-400 hover:text-indigo-400">Home</a>
-            <a href="#about" class="text-sm text-slate-400 hover:text-indigo-400">About</a>
-            <a href="#skills" class="text-sm text-slate-400 hover:text-indigo-400">Skills</a>
-            <a href="#education" class="text-sm text-slate-400 hover:text-indigo-400">Education</a>
-            <a href="#project" class="text-sm text-slate-400 hover:text-indigo-400">Projects</a>
-            <a href="#contact" class="text-sm text-slate-400 hover:text-indigo-400">Contact</a>
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-10 sm:py-12 px-4 sm:px-6 lg:px-12 text-center relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <a class="text-xl sm:text-2xl font-bold font-display text-white" href="#home">
+                    Sahrul<span class="text-indigo-400">.dev</span>
+                </a>
+                <p class="text-xs text-slate-400 mt-1">Full-Stack Web Developer & Integrator AI Indonesia</p>
+            </div>
+
+            <!-- Footer Navigation -->
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
+                <a href="#home" class="text-slate-400 hover:text-indigo-400 transition-colors">Beranda</a>
+                <a href="#about" class="text-slate-400 hover:text-indigo-400 transition-colors">Tentang</a>
+                <a href="#skills" class="text-slate-400 hover:text-indigo-400 transition-colors">Keahlian</a>
+                <a href="#education" class="text-slate-400 hover:text-indigo-400 transition-colors">Pendidikan</a>
+                <a href="#project" class="text-slate-400 hover:text-indigo-400 transition-colors">Proyek</a>
+                <a href="#contact" class="text-slate-400 hover:text-indigo-400 transition-colors">Kontak</a>
+            </div>
+
+            <!-- Footer Socials -->
+            <div class="flex justify-center space-x-3">
+                <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+                    class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-emerald-400 hover:border-emerald-500/40 flex items-center justify-center transition-all">
+                    <i class='bx bxl-whatsapp text-lg'></i>
+                </a>
+                <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                    class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-indigo-500/40 flex items-center justify-center transition-all">
+                    <i class='bx bxl-github text-lg'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                    class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 flex items-center justify-center transition-all">
+                    <i class='bx bxl-linkedin-square text-lg'></i>
+                </a>
+            </div>
         </div>
-        <div class="flex justify-center space-x-4 mb-6">
-            <a href="https://wa.me/6283833104245" target="_blank" rel="noopener noreferrer"
-                class="text-2xl text-slate-400 hover:text-indigo-400 transition-colors"><i
-                    class='bx bxl-whatsapp'></i></a>
-            <a href="https://github.com/sahrul223344" target="_blank" rel="noopener noreferrer"
-                class="text-2xl text-slate-400 hover:text-indigo-400 transition-colors"><i
-                    class='bx bxl-github'></i></a>
-            <a href="https://www.linkedin.com/in/sahrul-dev" target="_blank" rel="noopener noreferrer"
-                class="text-2xl text-slate-400 hover:text-indigo-400 transition-colors"><i
-                    class='bx bxl-linkedin-square'></i></a>
-        </div>
-        <div class="text-xs text-slate-500">
-            <p>&copy; 2026 <span class="text-slate-300 font-medium">Sahrul.dev</span>. All rights reserved.</p>
+
+        <div class="mt-8 border-t border-slate-900 pt-6 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-3 max-w-7xl mx-auto">
+            <p>&copy; 2026 <span class="text-slate-300 font-semibold">Sahrul.dev</span>. Hak Cipta Dilindungi Undang-Undang.</p>
+            <p class="text-slate-500">Dirancang & Didevelop dengan <i class='bx bxs-heart text-indigo-500 align-middle'></i> di Indonesia</p>
         </div>
     </footer>
 
-    <!-- AOS Script -->
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas"
+        class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-600/90 text-white shadow-xl border border-indigo-400/40 flex items-center justify-center text-xl opacity-0 pointer-events-none transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-1">
+        <i class='bx bx-chevron-up'></i>
+    </button>
+
+    <!-- AOS & Typed.js Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        AOS.init({ once: true, duration: 800 });
-
-        var typed = new Typed('#typing-text', {
-            strings: ['Frontend Web Developer', 'Backend Web Developer', 'Full-Stack Web Developer'],
-            typeSpeed: 60,
-            backSpeed: 40,
-            backDelay: 1500,
-            loop: true
-        });
-
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            menuBtn.classList.toggle('bx-menu');
-            menuBtn.classList.toggle('bx-x');
-        });
-
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-                menuBtn.classList.add('bx-menu');
-                menuBtn.classList.remove('bx-x');
-            });
-        });
-    </script>
+    <!-- Main Interactive Script -->
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
